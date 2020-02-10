@@ -1,7 +1,12 @@
 Exercise template
 =================
 
-## How to start using the template:
+This is a template structure for completing VHDL exercises in ELEC-E3540
+Digital Microelectronics. This repository is only for template development, to
+make your own project out of this, use following tutorial. _You can also these
+same steps with your own templates too, or any git project._
+
+### How to start using the template:
 
 Before starting, make sure you are certain about following:
 
@@ -19,7 +24,7 @@ These two will be referred further as `<your-subgroup-name>` and `<your-project-
 git clone git@version.aalto.fi:elec-e3540-exec/exercise_template.git <your-project-name>
 ```
 
-2. Remove the origin link an specify a new one within your own course
+2. Remove the origin link and specify a new one within your own course
    subgroup.
 
 ```
