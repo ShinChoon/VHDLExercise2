@@ -1,0 +1,6 @@
+*~
+*.swp
+simulations/work
+simulations/*.wlf
+simulations/transcript
+
