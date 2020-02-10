@@ -14,7 +14,7 @@ Before starting, make sure you are certain about following:
 * __name of your new project__
 
 These two will be referred further as `<your-subgroup-name>` and `<your-project-name>` accordingly.
-__Do not use spaces or special charactes__, preferably only underscores or dashes, for example `my-new-project_1`.
+__Do not use spaces or special characters__, preferably only underscores or dashes, for example `my-new-project_1`.
 
 ---
 
@@ -49,16 +49,16 @@ git push --set-upstream origin master
 git submodule update --init Exercise_instructions
 ```
 
-6. (optional) Use the QuestaSim do-file to run simulation _(assuming you are
-   logged into Vspace)_
+6. You can start developing! Make new entities and do-files if necessary. Don't
+   forget to add, commit, and push your changes to the remote repository to
+   save your progress.
+
+7. Once your VHDL code works, you can use the QuestaSim do-file to run
+   the simulation _(assuming you are logged into Vspace)_
 
 ```
 cd simulations
 use advms_17.1
 vsim -do run_simulation.do
 ```
-
-7. You can start developing! Make new entities and do-files if necessary. Don't
-   forget to add, commit, and push your changes to the remote repository to
-   save your progress.
 
