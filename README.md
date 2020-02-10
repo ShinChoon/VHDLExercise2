@@ -2,16 +2,15 @@ Exercise template
 =================
 
 This is a template structure for completing VHDL exercises in ELEC-E3540
-Digital Microelectronics. This repository is only for template development, to
-make your own project out of this, use following tutorial. _You can also these
-same steps with your own templates too, or any git project._
+Digital Microelectronics II. This repository is only for template development, to
+make your own project out of this, use following tutorial. _You can also use
+these same steps with your own templates too, or with any git project._
 
 ### How to start using the template:
 
 Before starting, make sure you are certain about following:
 
 * __name of your own course subgroup__ (check version.aalto.fi if you are not sure). In most cases this will be same as your git username.
-
 * __name of your new project__
 
 These two will be referred further as `<your-subgroup-name>` and `<your-project-name>` accordingly.
@@ -40,8 +39,8 @@ git remote add origin git@version.aalto.fi:elec-e3540-exec/<your-subgroup-name>/
 git push --set-upstream origin master
 ```
 
-4. Your new project is now visible at
-   version.aalto.fi/elec-e3540-exec/<your-subgroup-name>
+4. Your new project is now visible online at
+   version.aalto.fi/elec-e3540-exec/`<your-subgroup-name>`
 
 5. Intialize the instructions submodule
 

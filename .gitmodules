@@ -1,0 +1,3 @@
+[submodule "exercise_instructions"]
+	path = Exercise_instructions
+	url = git@version.aalto.fi:elec-e3540-exec/exercise_instructions.git
