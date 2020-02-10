@@ -54,7 +54,7 @@ git submodule update --init Exercise_instructions
    save your progress.
 
 7. Once your VHDL code works, you can use the QuestaSim do-file to run
-   the simulation _(assuming you are logged into Vspace)_
+   the simulation _(assuming you are logged in to Vspace)_
 
 ```
 cd simulations
