@@ -14,6 +14,7 @@ Before starting, make sure you are certain about following:
 * __name of your new project__
 
 These two will be referred further as `<your-subgroup-name>` and `<your-project-name>` accordingly.
+__Do not use spaces or special charactes__, preferably only underscores or dashes, for example `my-new-project_1`.
 
 ---
 
@@ -58,5 +59,6 @@ vsim -do run_simulation.do
 ```
 
 7. You can start developing! Make new entities and do-files if necessary. Don't
-   forget to add, commit, and push to save your progress.
+   forget to add, commit, and push your changes to the remote repository to
+   save your progress.
 
