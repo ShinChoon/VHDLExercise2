@@ -1,11 +1,8 @@
-library ieee;
-use ieee.std_logic_1164.all;
-
 entity orgate is
 end entity;
 
 architecture arch of orgate is
-    signal a, b, c : std_logic;
+    signal a, b, c : bit;
 begin
     
     c <= a or b;
