@@ -3,8 +3,14 @@ Exercise template
 
 This is a template structure for completing VHDL exercises in ELEC-E3540
 Digital Microelectronics II. This repository is only for template development, to
-make your own project out of this, use following tutorial. _You can also use
+make your own project out of this, use the tutorial below. _You can also use
 these same steps with your own templates too, or with any git project._
+
+### Directory structure:
+
+* __Exercise\_instructions__ 
+* __simulations__
+* __vhdl__
 
 ### How to start using the template:
 
@@ -41,7 +47,7 @@ git push --set-upstream origin master
 ```
 
 4. Your new project is now visible online at
-   version.aalto.fi/elec-e3540-exec/`<your-subgroup-name>`
+   version.aalto.fi/elec-e3540-exec/\<your-subgroup-name>
 
 5. Intialize the instructions submodule
 
@@ -49,16 +55,17 @@ git push --set-upstream origin master
 git submodule update --init Exercise_instructions
 ```
 
-6. You can start developing! Make new entities and do-files if necessary. Don't
-   forget to add, commit, and push your changes to the remote repository to
-   save your progress.
-
-7. Once your VHDL code works, you can use the QuestaSim do-file to run
-   the simulation _(assuming you are logged in to Vspace)_
+6. (optional) You can try using the QuestaSim do-file to automatically compile
+   the OR-gate example and run the simulation _(assuming you are logged in to
+   Vspace)_
 
 ```
 cd simulations
 use advms_17.1
 vsim -do run_simulation.do
 ```
+
+7. You can start developing! Make new entities and do-files if necessary. Don't
+   forget to add, commit, and push your changes to the remote repository to
+   save your progress.
 
