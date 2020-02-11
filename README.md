@@ -6,21 +6,33 @@ Digital Microelectronics II. This repository is only for template development, t
 make your own project out of this, use the tutorial below. _You can also use
 these same steps with your own templates too, or with any git project._
 
-### Directory structure:
+### Repository structure:
 
-* __Exercise\_instructions__ 
-* __simulations__
-* __vhdl__
+- __Exercise\_instructions:__ pointer to a git submodule. Upon
+  initializing, this directory will contain a git repository with exercise instructions.
+- __simulations:__ directory for all simulaiton-related files, namely
+    - do-files: QuestaSim scripts for automatic compiling of VHDL code and
+      running simulation 
+    - (optional) input and output files: these are sometimes required for
+      your testbench for reading and writing information using VHDL textio 
+    - QuestaSim files: these are automatically generated and should not be
+      included in git version control (see .gitignore file)
+- __vhdl:__ directory for your VHDL code and testbenches. _Remember, only 1 entity per file!_
+- __.gitignore:__ file that specifies git to not track certain files and/or
+  directories. Useful for keeping auto-generated trash out of the respository.
 
 ### How to start using the template:
 
 Before starting, make sure you are certain about following:
 
-* __name of your own course subgroup__ (check version.aalto.fi if you are not sure). In most cases this will be same as your git username.
+* __name of your own course subgroup__ (check version.aalto.fi if you are not
+  sure). In most cases this will be same as your git username.
 * __name of your new project__
 
-These two will be referred further as `<your-subgroup-name>` and `<your-project-name>` accordingly.
-__Do not use spaces or special characters__, preferably only underscores or dashes, for example `my-new-project_1`.
+These two will be referred further as `<your-subgroup-name>` and
+`<your-project-name>` accordingly.  __Do not use spaces or special
+characters__, preferably only underscores or dashes, for example
+`my-new-project_1`.
 
 ---
 
