@@ -16,6 +16,7 @@ use advms_17.1
 vsim -do run_simulation.do
 ```
 
+<<<<<<< HEAD
 * You can start developing! Make new entities and do-files if necessary. Don't
    forget to add, commit, and push your changes to the remote repository to
    save your progress. For example:
@@ -26,4 +27,9 @@ git add simulaitions/run_multiplexer.do
 git commit -m "added new version of multiplexer"
 git push 
 ```
+=======
+7. You can start developing! Make new entities and do-files if necessary. Don't
+   forget to add, commit, and push your changes to the remote repository to
+   save your progress.
+>>>>>>> b044f80 (added placeholder files)
 
