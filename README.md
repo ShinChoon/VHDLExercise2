@@ -31,5 +31,17 @@ git push
 7. You can start developing! Make new entities and do-files if necessary. Don't
    forget to add, commit, and push your changes to the remote repository to
    save your progress.
+<<<<<<< HEAD
 >>>>>>> b044f80 (added placeholder files)
+=======
+
+7. Once your VHDL code works, you can use the QuestaSim do-file to run
+   the simulation _(assuming you are logged in to Vspace)_
+
+```
+cd simulations
+use advms_17.1
+vsim -do run_simulation.do
+```
+>>>>>>> e37ba31 (small edits, template can be cloned)
 
