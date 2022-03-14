@@ -1,5 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
+<<<<<<< HEAD
 use ieee.numeric_std.all;
 
 entity multiplexer is
@@ -32,3 +33,7 @@ begin
     end process;
 
 end architecture;
+=======
+
+
+>>>>>>> f496601 (populated placeholders)
