@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 vlib work
 vcom -work work ../vhdl/multiplexer.vhd 
 vcom -work work ../vhdl/multi_tb.vhd 
@@ -27,33 +28,15 @@ wave zoom full
 
 
 # create work library (if not existing)
+=======
+>>>>>>> 8021808 (cleaned the code)
 vlib work
+vcom -work work ../vhdl/orgate.vhd 
 
-# (example) compile files into work library:
-# - all VHDL files from folder ../vhdl
-# - file "sim_testbench.vhd" from current folder
-# vcom -2008 -work work ../vhdl/*.vhd sim_testbench
-
-# compile multiplexer entity:
-vcom -2008 -work work ../vhdl/multiplexer.vhd 
-
-# initialize simulation
-vsim work.multiplexer
-
-# (example) add signals to wave window, different radix can be used
-# add wave sig1
-# add wave -decimal sig2
-# add wave -unsigned dut:sig3
-
-# add all waves in default radix
-add wave *
-
-# # run simulation for 80 us
-# run 80 us
-
-# run simulation till the end
+vsim work.orgate
+add wave a
+add wave b
+add wave c
 run -all
-
-# zoom out to full wave
 wave zoom full
 >>>>>>> f496601 (populated placeholders)
