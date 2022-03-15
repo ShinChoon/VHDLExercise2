@@ -23,7 +23,7 @@ begin
         a <= '1';
         wait for 1 ns;
 
-        wait;
+        wait; -- this stops simulation
     end process;
 
 end architecture;
