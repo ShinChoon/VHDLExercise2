@@ -1,7 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
+<<<<<<< HEAD
 use ieee.numeric_std.all;
 
+<<<<<<< HEAD
 entity multiplexer is
     port (
         clk : in bit;
@@ -32,3 +34,10 @@ begin
     end process;
 
 end architecture;
+=======
+
+
+>>>>>>> f496601 (populated placeholders)
+=======
+-- your code here
+>>>>>>> e37ba31 (small edits, template can be cloned)

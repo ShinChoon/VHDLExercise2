@@ -15,4 +15,3 @@ cd simulations
 use advms_17.1
 vsim -do run_simulation.do
 ```
-
