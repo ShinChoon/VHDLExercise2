@@ -33,7 +33,7 @@ architecture sim of multi_tb is
         );
         
     
-        Reading_text : process is
+    Reading_text : process is
             file stimulus_file : text open read_mode is "input.txt";
     file out_file : text open write_mode is "output.txt";
     variable text_line : line;
