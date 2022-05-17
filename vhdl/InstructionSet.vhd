@@ -1,26 +1,37 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+use ieee.std_logic_unsigned.all;
 package InstructionSet is
-    type instr_type is (ADDLW, ANDLW, CLRF, COMF, 
-                       DECF, INCF, IORLW, MOVLW, NOP, RLF,
-                       RRF, SUBLW, SWAPF, XORLW, BCF,
-                       BSF);
+
+    constant clk_hz : integer := 10000000;
+    constant clk_period : time := 1 sec / clk_hz;
+    constant N : integer := 8; --N bit
+    constant depth : integer := 8; --depth
+    constant length : integer := 8; --width
+    type reading_state is (ReadOperand, ReadInstr);
+    type writing_state is (Running, WriteResult);
+    type instr_type is (ADDWF, ANDWF, CLRF, CLRW, COMF, DECF, INCF, IORWF, MOVF, MOVWF, NOP, RLF, RRF, SUBWF, SWAPF, XORWF, 
+                       BCF, BSF, 
+                       ADDLW, ANDLW, IORLW, MOVLW, SUBLW, XORLW);
+    
+    type message_type is (byteT, bitT, literT);
+    type ALU_state is (iFetch, Mread, Execute, Mwrite);
     function generate_status(result: in std_logic_vector(8 downto 0)) 
     return std_logic_vector;
 
-    procedure string_to_insruction(signal str_read: in string(1 to 5);
+    function get_instr_type(message: in std_logic_vector(1 downto 0))
+    return message_type;
+
+    procedure string_to_insruction(signal str_read: in std_logic_vector(6 downto 0);
                                    signal instruction : out instr_type);
 
-    procedure ADDLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f: in std_logic_vector(7 downto 0);
+    procedure ADDWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
-    procedure ANDLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f: in std_logic_vector(7 downto 0);
+    procedure ANDWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
@@ -36,81 +47,74 @@ package InstructionSet is
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
-    procedure COMF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure COMF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
-    procedure DECF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure DECF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
-    procedure INCF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure INCF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
-    procedure CLRF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure CLRF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
 
-    procedure IORLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure IORWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
 
     
-    procedure MOVLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure MOVF(signal W : in std_logic_vector(7 downto 0);
+                    signal status_in : in std_logic_vector(2 downto 0);
+                    signal status_out : out std_logic_vector(2 downto 0);
+                    signal result :  out std_logic_vector(7 downto 0));
+
+    procedure MOVWF(signal W,f : in std_logic_vector(7 downto 0);
+                signal status_in : in std_logic_vector(2 downto 0);
+                signal status_out : out std_logic_vector(2 downto 0);
+                signal result :  out std_logic_vector(7 downto 0));
+
+
+    procedure RLF(signal W,f : in std_logic_vector(7 downto 0);
+                    signal status_in : in std_logic_vector(2 downto 0);
+                    signal status_out : out std_logic_vector(2 downto 0);
+                    signal result :  out std_logic_vector(7 downto 0));
+
+    procedure RRF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
 
-    procedure RLF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
-                    signal status_in : in std_logic_vector(2 downto 0);
-                    signal status_out : out std_logic_vector(2 downto 0);
-                    signal result :  out std_logic_vector(7 downto 0));
-
-    procedure RRF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure SUBWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
 
-    procedure SUBLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure SWAPF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
 
-
-    procedure SWAPF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
-                    signal status_in : in std_logic_vector(2 downto 0);
-                    signal status_out : out std_logic_vector(2 downto 0);
-                    signal result :  out std_logic_vector(7 downto 0));
-
-    procedure XORLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure XORWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
     
 
-    procedure NOP(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure NOP(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0));
@@ -121,6 +125,7 @@ end package InstructionSet;
 
 
 package body InstructionSet is
+
 
     function generate_status(result: in std_logic_vector(8 downto 0)) return std_logic_vector is
         variable status : std_logic_vector(2 downto 0);
@@ -149,69 +154,113 @@ package body InstructionSet is
         return status;
     end function generate_status;
 
-    procedure string_to_insruction(signal str_read: in string(1 to 5);
+    function get_instr_type(message: in std_logic_vector(1 downto 0)) return message_type is
+        begin
+            case message is
+                when "00"  => return byteT;
+                when "01"  => return bitT; 
+                when "11"  => return literT; 
+                when others => return literT;
+            end case;
+    end function get_instr_type;
+
+    procedure string_to_insruction(signal str_read: in std_logic_vector(6 downto 0);
                                    signal instruction : out instr_type) is
         begin
-
             case str_read is 
-                when "ADDWF" => instruction <= ADDLW;
-                when "ADDLW" => instruction <= ADDLW;
-                when "ANDWF" => instruction <= ANDLW;
-                when "ANDLW" => instruction <= ANDLW;
-                when "CLRFZ" => instruction <= CLRF;
-                when "CLRWZ" => instruction <= CLRF;
-                when "COMFZ" => instruction <= COMF;
-                when "DECFZ" => instruction <= DECF;
-                when "INCFZ" => instruction <= INCF;
-                when "IORWF" => instruction <= IORLW;
-                when "IORLW" => instruction <= IORLW;
-                when "MOVFZ" => instruction <=  MOVLW;
-                when "MOVLW" => instruction <= MOVLW;
-                when "MOVWF" => instruction <= MOVLW;
-                when "RLFZZ" => instruction <= RLF;
-                when "RRFZZ" => instruction <= RRF;
-                when "SUBLW" => instruction <= SUBLW;
-                when "SUBWF" => instruction <= SUBLW;
-                when "SWAPF" => instruction <= SWAPF;
-                when "XORWF" => instruction <= XORLW;
-                when "BCFZZ" => instruction <= BCF;
-                when "BSFZZ" => instruction <= BSF;
-                when "NOPZZ" => instruction <= NOP;
-                when others => instruction <= NOP;
+                when "0001110" => instruction <= ADDWF;
+                when "0001111" => instruction <= ADDWF;
+			    when "0001010" => instruction <= ANDWF;
+                when "0001011" => instruction <= ANDWF;
+			    when "0000011" => instruction <= CLRF;
+			    when "0000010" => instruction <= CLRW;
+			    when "0010010" => instruction <= COMF;
+                when "0010011" => instruction <= COMF;
+			    when "0000110" => instruction <= DECF;
+                when "0000111" => instruction <= DECF;
+			    when "0010100" => instruction <= INCF;
+                when "0010101" => instruction <= INCF;
+			    when "0010000" => instruction <= MOVF;
+                when "0010001" => instruction <= MOVF;
+			    when "0000001" => instruction <= MOVWF;
+			    when "0000000" => instruction <= NOP;
+			    when "0011010" => instruction <= RLF;
+                when "0011011" => instruction <= RLF;
+			    when "0011000" => instruction <= RRF;
+                when "0011001" => instruction <= RRF;
+			    when "0000100" => instruction <= SUBWF;
+                when "0000101" => instruction <= SUBWF;
+			    when "0011100" => instruction <= SWAPF;
+                when "0011101" => instruction <= SWAPF;
+			    when "0001100" => instruction <= XORWF;
+                when "0001101" => instruction <= XORWF;
+
+			    when "0100000" => instruction <= BCF;
+			    when "0100001" => instruction <= BCF;
+			    when "0100010" => instruction <= BCF;
+                when "0100011" => instruction <= BCF;
+			    when "0100100" => instruction <= BCF;
+			    when "0100101" => instruction <= BCF;
+			    when "0100110" => instruction <= BCF;
+			    when "0100111" => instruction <= BCF;
+            
+			    when "0101000" => instruction <= BSF;
+			    when "0101001" => instruction <= BSF;
+                when "0101010" => instruction <= BSF;
+                when "0101011" => instruction <= BSF;
+                when "0101100" => instruction <= BSF;
+                when "0101101" => instruction <= BSF;       
+                when "0101110" => instruction <= BSF;
+                when "0101111" => instruction <= BSF;
+
+			    when "1111100" => instruction <= ADDLW;
+			    when "1111101" => instruction <= ADDLW;
+			    when "1111110" => instruction <= ADDLW; 
+			    when "1111111" => instruction <= ADDLW;
+
+                when "1110010" => instruction <= ANDLW;
+                when "1110011" => instruction <= ANDLW;
+			    when "1110000" => instruction <= IORLW;
+                when "1110001" => instruction <= IORLW;
+
+			    when "1100000" => instruction <= MOVLW;
+                when "1100001" => instruction <= MOVLW;
+                when "1100010" => instruction <= MOVLW;
+                when "1100011" => instruction <= MOVLW;
+                when "1100100" => instruction <= MOVLW;
+                when "1100101" => instruction <= MOVLW;
+                when "1100110" => instruction <= MOVLW;
+                when "1100111" => instruction <= MOVLW;
+
+			    when "1111000" => instruction <= SUBLW;
+                when "1111001" => instruction <= SUBLW;
+                when "1111010" => instruction <= SUBLW;
+                when "1111011" => instruction <= SUBLW;
+
+			    when "1110100" => instruction <= XORLW;
+                when "1110101" => instruction <= XORLW;
+
+			    when "0001000" => instruction <= IORWF;
+                when "0001001" => instruction <= IORWF;
+			    when others => instruction <= NOP;
+
             end case;
-
-
 
     end procedure string_to_insruction;
 
-    procedure ADDLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f: in std_logic_vector(7 downto 0);
+    procedure ADDWF(signal W,f: in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
-        variable inter : std_logic_vector(8 downto 0);
+        variable interResult : std_logic_vector(8 downto 0);
         begin
-            inter := std_logic_vector(unsigned('0' & W) + unsigned('0' & f));
-            result <= inter(7 downto 0);
-            status_out <= generate_status(inter);
-    end procedure ADDLW;
+            interResult := ('0' & W )+ f;
+            result <= interResult(7 downto 0);
+            status_out <= generate_status(interResult);
+    end procedure ADDWF;
 
-    -- procedure ADDWF(signal W,f : in std_logic_vector(7 downto 0),
-    --                 signal d : in std_logic,
-    --                 signal status: in std_logic_vector(2 downto 0)) is
-    --     variable result : std_logic_vector(8 downto 0);
-    --     begin
-    --         result := std_logic_vector(unsigned('0' & W) + unsigned('0' & f));
-    --         if d = '0' then
-    --             W <= result(7 downto 0);
-    --         else
-    --             f <= result(7 downto 0);
-    --         end if;
-    --         status <= generate_status(result);
-    -- end procedure ADDWF;
 
-    procedure ANDLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f: in std_logic_vector(7 downto 0);
+    procedure ANDWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -220,21 +269,8 @@ package body InstructionSet is
             inter := ('0' & W) and ('0' & f);
             result <= inter(7 downto 0);
             status_out <= generate_status(inter);
-    end procedure ANDLW;
+    end procedure ANDWF;
 
-    -- procedure ANDWF(signal W,f : in std_logic_vector(7 downto 0),
-    --                 signal d: in std_logic,
-    --                 signal status: in std_logic_vector(2 downto 0)) is
-    --     variable result : std_logic_vector(8 downto 0);
-    --     begin
-    --         result := ('0' & W) and ('0' & f);
-    --         if d='0' then
-    --             W <= result(7 downto 0);
-    --         else
-    --             f <= result(7 downto 0);
-    --         end if;
-    --         status <= generate_status(result);
-    -- end procedure ANDWF;
 
     procedure BCF(signal f: in std_logic_vector(7 downto 0);
                     signal b: in std_logic_vector(2 downto 0);
@@ -258,8 +294,7 @@ package body InstructionSet is
                 status_out <= status_in;
     end procedure BSF;
 
-    procedure COMF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure COMF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -277,8 +312,7 @@ package body InstructionSet is
             end if;
     end procedure COMF;
 
-    procedure DECF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure DECF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -294,14 +328,13 @@ package body InstructionSet is
             end if;
     end procedure DECF;
 
-    procedure INCF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure INCF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
         variable inter : std_logic_vector(8 downto 0);
         begin
-            inter := std_logic_vector(unsigned('0' & f)+1);
+            inter := ('0' & f) + 1;
             result <= inter(7 downto 0);
             status_out <= status_in;
             if inter = "000000000" then
@@ -311,20 +344,18 @@ package body InstructionSet is
             end if;
     end procedure INCF;
 
-    procedure CLRF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure CLRF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
         begin
-            result <= "00000000" and f;
-            status_out <= status_in;
+            result <= "00000000";
             status_out(2) <= '1';
+            status_out(1 downto 0) <= status_in(1 downto 0);
     end procedure CLRF;
 
 
-    procedure IORLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure IORWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -336,61 +367,30 @@ package body InstructionSet is
             else 
             status_out(2) <= '0';
             end if;
-    end procedure IORLW;
+    end procedure IORWF;
 
-    -- procedure IORWF(signal W,f:in std_logic_vector(7 downto 0),
-    --             signal d: in std_logic,
-    --             signal status_in : in std_logic_vector(2 downto 0),signal status_out : out std_logic_vector(2 downto 0))is
-    -- variable result : std_logic_vector(8 downto 0);
-    -- begin
-    --     result <= W or k;
-    --     if d = '0' then
-    --         W <= result(7 downto 0);
-    --     else
-    --         f <= result(7 downto 0);
-    --     end if;
-    --     status(2) <= '1' when result = "00000000" else '0';
-    -- end procedure IORWF;
-
-    -- procedure MOVF(signal W, f: in std_logic_vector(7 downto 0),
-    --                 signal d : in std_logic,
-    --                 signal status: in std_logic_vector(2 downto 0)) is
-    --     begin
-
-    --         if d = '0' then
-    --             f <= W;
-    --         else:
-    --             W <= W;
-    --         end if;
-
-    --         status(2) <= W(7);
-
-    -- end procedure MOVF;
-
-
-    
-    procedure MOVLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure MOVF(signal W : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
         begin
-            result <= f;
+            result <= W;
             status_out <= status_in;
-            status_out(2) <= W(7);
-    end procedure MOVLW;
+    end procedure MOVF;
 
 
-    -- procedure MOVWF(signal W:in std_logic_vector(7 downto 0),
-    --                 signal f : out std_logic_vector(7 downto 0),
-    --                 signal status: in std_logic_vector(2 downto 0)) is
-    --     begin
-    --         f <= W;
-    -- end procedure MOVWF;
+    
+    procedure MOVWF(signal W,f : in std_logic_vector(7 downto 0);
+                    signal status_in : in std_logic_vector(2 downto 0);
+                    signal status_out : out std_logic_vector(2 downto 0);
+                    signal result :  out std_logic_vector(7 downto 0))is
+        begin
+            result <= W;
+            status_out <= status_in;
+    end procedure MOVWF;
 
 
-    procedure RLF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure RLF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -403,8 +403,7 @@ package body InstructionSet is
             status_out <= status_in;
     end procedure RLF;
 
-    procedure RRF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure RRF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -418,8 +417,7 @@ package body InstructionSet is
     end procedure RRF;
 
 
-    procedure SUBLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure SUBWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -430,43 +428,20 @@ package body InstructionSet is
             status_out <= status_in;
             status_out <= generate_status(inter);
 
-    end procedure SUBLW;
+    end procedure SUBWF;
 
-    -- procedure SUBWF(signal f: in std_logic_vector(7 downto 0);
-    --                 signal W: out std_logic_vector(7 downto 0),
-    --                 signal d: in std_logic,
-    --                 signal status: out std_logic_vector(2 downto 0))is
-    --         variable result : std_logic_vector(8 downto 0);
-    --     begin
-    --         result := std_logic_vector(unsigned('0'&W)-unsigned('0'&k));
-    --         if d = '0' then
-    --         status <= generate_status(result);
-    --         W <= result(7 downto 0);
-    --         else:
-    --             status <= generate_status(result);
-    --             f <= result(7 downto 0);
-    --         end if;
-    -- end procedure SUBWF;
-
-
-    procedure SWAPF(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure SWAPF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
                 variable inter : std_logic_vector(7 downto 0);
             begin
                 inter := W(3 downto 0) & W(7 downto 4);
-                -- if d = '0' then
-                result <= inter;
-                status_out <= status_in;
-                -- else
-                --     f <= result;
-                -- end if;
+                    result <= inter;
+                    status_out <= status_in;
     end procedure SWAPF;
 
-    procedure XORLW(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure XORWF(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
@@ -478,26 +453,9 @@ package body InstructionSet is
                 else 
                 status_out(2) <= '0';
                 end if;               
-    end procedure XORLW;
-    
+    end procedure XORWF;
 
-
-    -- procedure XORWF(signal W, f: in std_logic_vector(7 downto 0),
-    --                 signal d: in std_logic),
-    --                 signal status: in std_logic_vector(2 downto 0)) is
-    --             variable result : std_logic_vector(7 downto 0);
-    --         begin
-    --             result := W XOR k;
-    --             if d = '0' then
-    --                 W <= result;
-    --             else
-    --                 f <= result;
-    --             end if;
-    --             status(2) <= '0' when result = "000000000" else '0';
-    -- end procedure XORWF;
-
-    procedure NOP(signal W : in std_logic_vector(7 downto 0);
-                    signal f : in std_logic_vector(7 downto 0);
+    procedure NOP(signal W,f : in std_logic_vector(7 downto 0);
                     signal status_in : in std_logic_vector(2 downto 0);
                     signal status_out : out std_logic_vector(2 downto 0);
                     signal result :  out std_logic_vector(7 downto 0))is
