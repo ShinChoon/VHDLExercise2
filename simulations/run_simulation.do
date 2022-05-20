@@ -9,7 +9,7 @@ vsim work.ALU_tb
 add wave A
 #add wave result
 
-add wave op_wr
+add wave op_wr_RAM
 add wave instr_wr
 add wave resultOutReg
 add wave resultOutMem

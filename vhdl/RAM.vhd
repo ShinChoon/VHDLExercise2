@@ -36,6 +36,9 @@ begin
     state_reg: process(clk) is
 
         begin
+            d_out <= pipelined_d_out;
+            status_out <= pipelined_s_out;
+            instruction_out <= pipelined_i_out;  
             if rst = '1' then
                 instruction_array <= (others=>(others=>'0'));--data output
                 operand_array <= (others=>(others=>'0'));--status
@@ -43,8 +46,6 @@ begin
                 if rising_edge(clk) then
                     pipelined_d_out<= operand_array(to_integer(unsigned(addr)));
                     pipelined_s_out<= operand_array(3)(2 downto 0);              
-                    d_out <= pipelined_d_out;
-                    status_out <= pipelined_s_out;
                     if op_wr = '1' then
                         operand_array(to_integer(unsigned(addr))) <= d_in;
                         if addr = x"03" then
@@ -58,11 +59,7 @@ begin
                         instruction_array(PC_tot) <= instruction_in;
                     else
                         pipelined_i_out<= instruction_array(PC);
-                        -- report "pipelined_i_out:  " & integer'image(to_integer(unsigned(pipelined_i_out)));
-                        instruction_out <= pipelined_i_out;  
                     end if;
-
-                -- report "instruction written: " & instruction_in;
                 end if;
         end if;
     end process state_reg;

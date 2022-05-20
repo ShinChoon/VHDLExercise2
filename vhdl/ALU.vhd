@@ -47,10 +47,11 @@ begin
                         when BSF => BSF(A,bit_select,status_in, statusOut, resultOut);
                         when others => NOP(A,B,status_in, statusOut, resultOut);
                     end case;
-                    result <= resultOut;
-                    status_out <= statusOut;
+
                 end if;
             end if;
+            result <= resultOut;
+            status_out <= statusOut;
     end process;
 
 end architecture;

@@ -16,7 +16,6 @@ architecture sim of ALU_tb is
     signal message : std_logic_vector(13 downto 0) := (others=>'0');
     signal instruction_in : std_logic_vector(13 downto 0) := (others=>'0');
     signal instruction_out : std_logic_vector(13 downto 0) := (others=>'0');
-    signal instruction_out2 : std_logic_vector(13 downto 0) := (others=>'0');
     signal output_lit : std_logic_vector(length-1 downto 0):=(others=>'0');
     signal bit_select : std_logic_vector(2 downto 0) := (others=> '0');
     signal input_select : std_logic := '0';
@@ -27,14 +26,11 @@ architecture sim of ALU_tb is
     signal statusIn : std_logic_vector(2 downto 0):=(others=>'0');
     signal statusOut : std_logic_vector(2 downto 0):=(others=>'0');
 
-    signal op_wr : std_logic := '0';
     signal instr_wr : std_logic := '0';
     signal addr : std_logic_vector(depth-1 downto 0):=(0 => '1', others=>'0');
 
     signal addrRAM : std_logic_vector(depth-1 downto 0):=(0 => '1', others=>'0');
     signal addrFSM : std_logic_vector(depth-1 downto 0):=(0 => '1', others=>'0');
-    signal instr_wr_RAM : std_logic := '0';
-    signal instr_wr_FSM : std_logic := '0';
     signal op_wr_RAM : std_logic := '0';
     signal op_wr_FSM : std_logic := '0';
 
@@ -83,7 +79,7 @@ architecture sim of ALU_tb is
         rst => rst,
         status_in => statusOut,
         status_out => statusIn,
-        op_wr => op_wr,
+        op_wr => op_wr_RAM,
         instr_wr => instr_wr,
         instruction_in => instruction_in,
         instruction_out => instruction_out
@@ -144,21 +140,16 @@ end process clk_finite;
      begin 
 if rising_edge(clk) then 
     if not endfile(stimulus_file) then
-                instr_wr <= '1';
-                -- instr_wr <= instr_wr_FSM;
-                    -- if rising_edge(clk) then
-                        -- if opcode_status'event then
-                        --     if (opcode_status=iFetch) then    
+                instr_wr <= '1'; 
                 readline(stimulus_file,TEXT_LINE);
                 read(TEXT_LINE, StringMessage);
                 instruction_in <= StringMessage;
                 PC_tot_RAM <= PC_tot_RAM + 1;
-                            -- end if;
     else
         instr_wr <= '0';
         PC_tot_FSM <= PC_tot_RAM;
         addr <= addrFSM;
-        op_wr <= op_wr_FSM;
+        op_wr_RAM <= op_wr_FSM;
         if opcode_status'event and (opcode_status = Mwrite) then
             write(TEXT_LINE2, to_integer(unsigned(addr)));
             write(TEXT_LINE2,COM); 
@@ -177,7 +168,6 @@ end if;
 reg:process(clk,instr_wr)is
 	begin
 if rising_edge(clk) then 
-        -- instr_wr <= instr_wr_FSM;
 		if instr_wr='1'then
 			resultOutReg<=(others=>'0');
 		elsif rising_edge(clk) then

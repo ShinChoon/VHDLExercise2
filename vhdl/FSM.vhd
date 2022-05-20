@@ -35,7 +35,6 @@ architecture rtl of FSM is
     signal fsmPC : integer := 0;
     signal interResult1 : std_logic_vector(length-1 downto 0):=(others=>'0');
     signal interResult2 : std_logic_vector(length-1 downto 0):=(others=>'0');
-    -- signal inter_lit : std_logic_vector(7 downto 0):=(others=>'0');
     signal o_select : std_logic := '0';
     signal in_select : std_logic := '0';
     signal b_select : std_logic_vector(2 downto 0):=(others=>'0');
@@ -51,7 +50,7 @@ MAIN: process(current_state) is
         begin
                 case current_state is
                 when iFetch =>
-                    op_wr <= '0';
+                    wr <= '0';
                     -- instr_wr <= '0';
                     instruction_type := get_instr_type(message(13 downto 12));
                     string_to_insruction(message(13 downto 7), Instruction); --get instruction
@@ -76,16 +75,17 @@ MAIN: process(current_state) is
                     next_state <= Mread;
 
                 when Mread =>
-                    op_wr <= '0';
+                    wr <= '0';
                     -- instr_wr <= '0';
                     next_state <= Execute;
 
                 when Execute =>
+                    wr <= '0';
                     --jsut for delay
                     next_state <= Mwrite;
                 
                 when Mwrite =>
-                    op_wr <='1';
+                    wr <='1';
                     -- instr_wr <= '0';
                     if  o_select = '1' then
                         interResult1 <= resultIn;
@@ -113,7 +113,7 @@ STATE_CHANGE: process(clk,rst, instr_wr) is
         output_lit <= message(7 downto 0);
         bit_select <= b_select;
         input_select <= in_select;
-        -- op_wr <= wr;
+        op_wr <= wr;
         addr <= addrIn;
         opInstruction <= Instruction;
         PC <= fsmPC;
