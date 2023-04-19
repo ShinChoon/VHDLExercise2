@@ -1,0 +1,273 @@
+[05/24 22:25:58     0s] Checking out Encounter license ...
+[05/24 22:25:58     0s] 	edsxl		DENIED:		"Encounter_Digital_Impl_Sys_XL"
+[05/24 22:25:58     0s] 	edsl		DENIED:		"Encounter_Digital_Impl_Sys_L"
+[05/24 22:25:58     0s] 	encblk		DENIED:		"Encounter_Block"
+[05/24 22:25:58     0s] 	fegxl		DENIED:		"First_Encounter_GXL"
+[05/24 22:25:58     0s] 	fexl		DENIED:		"FE_GPS"
+[05/24 22:25:58     0s] 	nru		DENIED:		"NanoRoute_Ultra"
+[05/24 22:25:58     0s] 	vdixl		DENIED:		"Virtuoso_Digital_Implem_XL"
+[05/24 22:25:58     0s] 	vdi		DENIED:		"Virtuoso_Digital_Implem"
+[05/24 22:25:58     0s] 	fel		DENIED:		"First_Encounter_VIP"
+[05/24 22:25:58     0s] 	invsb		DENIED:		"Innovus_Impl_System_Basic"
+[05/24 22:25:58     0s] 	invs		CHECKED OUT:	"Innovus_Impl_System"
+[05/24 22:25:58     0s] Innovus_Impl_System 15.1 license checkout succeeded.
+[05/24 22:25:58     0s] You can run 8 CPU jobs with the base license that is currently checked out.
+[05/24 22:25:58     0s] If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+[05/24 22:25:59     0s] **ERROR: (ENCOAX-142):	Could not open shared library libfeoax22.so : liboaDesign.so: cannot open shared object file: No such file or directory
+[05/24 22:25:59     0s] 
+[05/24 22:25:59     0s] **ERROR: (ENCOAX-142):	OA features will be disabled in this session.
+[05/24 22:25:59     0s] 
+[05/24 22:26:05     6s] *******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+[05/24 22:26:05     6s] @(#)CDS: Encounter v14.28-s033_1 (64bit) 03/21/2016 13:34 (Linux 2.6.18-194.el5)
+[05/24 22:26:05     6s] @(#)CDS: NanoRoute v14.28-s005 NR160313-1959/14_28-UB (database version 2.30, 267.6.1) {superthreading v1.25}
+[05/24 22:26:05     6s] @(#)CDS: CeltIC v14.28-s006_1 (64bit) 03/08/2016 00:08:23 (Linux 2.6.18-194.el5)
+[05/24 22:26:05     6s] @(#)CDS: AAE 14.28-s002 (64bit) 03/21/2016 (Linux 2.6.18-194.el5)
+[05/24 22:26:05     6s] @(#)CDS: CTE 14.28-s007_1 (64bit) Mar  7 2016 23:11:05 (Linux 2.6.18-194.el5)
+[05/24 22:26:05     6s] @(#)CDS: CPE v14.28-s006
+[05/24 22:26:05     6s] @(#)CDS: IQRC/TQRC 14.2.2-s217 (64bit) Wed Apr 15 23:10:24 PDT 2015 (Linux 2.6.18-194.el5)
+[05/24 22:26:05     6s] @(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+[05/24 22:26:05     6s] @(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+[05/24 22:26:05     6s] @(#)CDS: RCDB 11.5
+[05/24 22:26:05     6s] --- Starting "Encounter v14.28-s033_1" on Tue May 24 22:26:05 2022 (mem=97.3M) ---
+[05/24 22:26:05     6s] --- Running on vspace.ecdl.hut.fi (x86_64 w/Linux 3.10.0-1160.59.1.el7.x86_64) ---
+[05/24 22:26:05     6s] This version was compiled on Mon Mar 21 13:34:48 PDT 2016.
+[05/24 22:26:05     6s] Set DBUPerIGU to 1000.
+[05/24 22:26:05     6s] Set net toggle Scale Factor to 1.00
+[05/24 22:26:05     6s] Set Shrink Factor to 1.00000
+[05/24 22:26:06     6s] 
+[05/24 22:26:06     6s] **INFO:  MMMC transition support version v31-84 
+[05/24 22:26:06     6s] 
+[05/24 22:26:06     6s] <CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+[05/24 22:26:06     6s] <CMD> suppressMessage ENCEXT-2799
+[05/24 22:26:06     6s] <CMD> win
+[05/24 22:28:01    20s] <CMD> create_rc_corner -name rc_basic -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {../techlibs/qrcTechFile}
+[05/24 22:28:01    20s] <CMD> create_library_set -name slow_libs -timing {../techlibs/slow.lib}
+[05/24 22:28:01    20s] <CMD> create_library_set -name fast_libs -timing {../techlibs/fast.lib}
+[05/24 22:28:01    20s] <CMD> create_constraint_mode -name constraint_basic -sdc_files {../timing/prelayout.sdc}
+[05/24 22:28:01    20s] <CMD> create_delay_corner -name slow_corner -library_set {slow_libs} -rc_corner {rc_basic}
+[05/24 22:28:01    20s] <CMD> create_delay_corner -name fast_corner -library_set {fast_libs} -rc_corner {rc_basic}
+[05/24 22:28:01    20s] <CMD> create_analysis_view -name setup_view -constraint_mode {constraint_basic} -delay_corner {slow_corner}
+[05/24 22:28:01    20s] <CMD> create_analysis_view -name hold_view -constraint_mode {constraint_basic} -delay_corner {fast_corner}
+[05/24 22:28:01    20s] <CMD> set_analysis_view -setup {setup_view} -hold {hold_view}
+[05/24 22:29:04    27s] <CMD> set init_gnd_net vss!
+[05/24 22:29:04    27s] <CMD> set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+[05/24 22:29:04    27s] <CMD> set init_design_settop 0
+[05/24 22:29:04    27s] <CMD> set init_verilog ../netlist/serial_peripheral_interface.v
+[05/24 22:29:04    27s] <CMD> set init_mmmc_file Default.view
+[05/24 22:29:04    27s] <CMD> set init_pwr_net vdd!
+[05/24 22:29:04    27s] <CMD> init_design
+[05/24 22:29:04    27s] **ERROR: (ENCOAX-820):	The OA features are disabled in the current session of Encounter because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Encounter either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+[05/24 22:29:04    27s] 
+[05/24 22:29:04    27s] **ERROR: (ENCOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+[05/24 22:29:04    27s] 
+[05/24 22:29:04    27s] Loading LEF file ../techlibs/gsclib045_tech.lef ...
+[05/24 22:29:04    27s] **WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+[05/24 22:29:04    27s] **WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+[05/24 22:29:04    27s] **WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+[05/24 22:29:04    27s] **WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+[05/24 22:29:04    27s] **WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+[05/24 22:29:04    27s] **WARN: (ENCLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+[05/24 22:29:04    27s] 
+[05/24 22:29:04    27s] Loading LEF file ../techlibs/gsclib045_macro.lef ...
+[05/24 22:29:04    27s] Set DBUPerIGU to M2 pitch 400.
+[05/24 22:29:04    27s] **WARN: (ENCLF-200):	Pin 'A' in macro 'ANTENNALVT' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+[05/24 22:29:04    27s] Type 'man ENCLF-200' for more detail.
+[05/24 22:29:04    27s] 
+[05/24 22:29:04    27s] viaInitial starts at Tue May 24 22:29:04 2022
+viaInitial ends at Tue May 24 22:29:04 2022
+*** Begin netlist parsing (mem=354.4M) ***
+[05/24 22:29:04    27s] Reading netlist ...
+[05/24 22:29:04    27s] Backslashed names will retain backslash and a trailing blank character.
+[05/24 22:29:04    27s] Reading verilog netlist '../netlist/serial_peripheral_interface.v'
+[05/24 22:29:05    27s] 
+[05/24 22:29:05    27s] *** Memory Usage v#1 (Current mem = 365.414M, initial mem = 97.324M) ***
+[05/24 22:29:05    27s] *** End netlist parsing (cpu=0:00:00.2, real=0:00:01.0, mem=365.4M) ***
+[05/24 22:29:05    27s] Top level cell is microcontroller_interface_8_8.
+[05/24 22:29:05    27s] Loading view definition file from Default.view
+[05/24 22:29:05    27s] Reading slow_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib' ...
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXLLVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXLLVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXLLVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXLLVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1LVT' is not defined in the library.
+[05/24 22:29:05    27s] **WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2LVT' is not defined in the library.
+[05/24 22:29:05    27s] Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+[05/24 22:29:05    28s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis.
+[05/24 22:29:05    28s] Read 480 cells in library 'slow_vdd1v0' 
+[05/24 22:29:05    28s] Reading fast_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v0_basicCells_lvt.lib' ...
+[05/24 22:29:06    29s] **WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis.
+[05/24 22:29:06    29s] Read 480 cells in library 'fast_vdd1v0' 
+[05/24 22:29:06    29s] *** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.48min, fe_real=3.13min, fe_mem=413.4M) ***
+[05/24 22:29:06    29s] Starting recursive module instantiation check.
+[05/24 22:29:06    29s] No recursion found.
+[05/24 22:29:06    29s] Building hierarchical netlist for Cell microcontroller_interface_8_8 ...
+[05/24 22:29:06    29s] *** Netlist is unique.
+[05/24 22:29:06    29s] ** info: there are 968 modules.
+[05/24 22:29:06    29s] ** info: there are 14077 stdCell insts.
+[05/24 22:29:06    29s] 
+[05/24 22:29:06    29s] *** Memory Usage v#1 (Current mem = 427.445M, initial mem = 97.324M) ***
+[05/24 22:29:06    29s] **WARN: (ENCFP-3961):	The techSite 'CoreSiteDouble' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+[05/24 22:29:06    29s] Type 'man ENCFP-3961' for more detail.
+[05/24 22:29:06    29s] **WARN: (ENCFP-3961):	The techSite 'CornerSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+[05/24 22:29:06    29s] Type 'man ENCFP-3961' for more detail.
+[05/24 22:29:06    29s] **WARN: (ENCFP-3961):	The techSite 'IOSite' has no related cells in LEF library. Cannot make calculations for this site type unless cell models of this type exist in the LEF library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF to avoid this message.
+[05/24 22:29:06    29s] Type 'man ENCFP-3961' for more detail.
+[05/24 22:29:06    29s] Set Default Net Delay as 1000 ps.
+[05/24 22:29:06    29s] Set Default Net Load as 0.5 pF. 
+[05/24 22:29:06    29s] Set Input Pin Transition Delay as 0.1 ps.
+[05/24 22:29:06    29s] Initializing multi-corner RC extraction with 1 active RC Corners ...
+[05/24 22:29:06    29s] Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+[05/24 22:29:07    30s] Importing multi-corner technology file(s) for preRoute extraction...
+[05/24 22:29:07    30s] ../techlibs/qrcTechFile
+[05/24 22:29:14    36s] Completed (cpu: 0:00:07.3 real: 0:00:08.0)
+[05/24 22:29:14    36s] Set Shrink Factor to 1.00000
+[05/24 22:29:14    36s] Summary of Active RC-Corners : 
+[05/24 22:29:14    36s]  
+[05/24 22:29:14    36s]  Analysis View: setup_view
+[05/24 22:29:14    36s]     RC-Corner Name        : rc_basic
+[05/24 22:29:14    36s]     RC-Corner Index       : 0
+[05/24 22:29:14    36s]     RC-Corner Temperature : 25 Celsius
+[05/24 22:29:14    36s]     RC-Corner Cap Table   : ''
+[05/24 22:29:14    36s]     RC-Corner PreRoute Res Factor         : 1
+[05/24 22:29:14    36s]     RC-Corner PreRoute Cap Factor         : 1
+[05/24 22:29:14    36s]     RC-Corner PostRoute Res Factor        : 1
+[05/24 22:29:14    36s]     RC-Corner PostRoute Cap Factor        : 1
+[05/24 22:29:14    36s]     RC-Corner PostRoute XCap Factor       : 1
+[05/24 22:29:14    36s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner PostRoute Clock Cap Factor  : 1   	[Derived from postRoute_cap (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner PostRoute Clock Res Factor  : 1   	[Derived from postRoute_res (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner Technology file: '../techlibs/qrcTechFile'
+[05/24 22:29:14    36s]  
+[05/24 22:29:14    36s]  Analysis View: hold_view
+[05/24 22:29:14    36s]     RC-Corner Name        : rc_basic
+[05/24 22:29:14    36s]     RC-Corner Index       : 0
+[05/24 22:29:14    36s]     RC-Corner Temperature : 25 Celsius
+[05/24 22:29:14    36s]     RC-Corner Cap Table   : ''
+[05/24 22:29:14    36s]     RC-Corner PreRoute Res Factor         : 1
+[05/24 22:29:14    36s]     RC-Corner PreRoute Cap Factor         : 1
+[05/24 22:29:14    36s]     RC-Corner PostRoute Res Factor        : 1
+[05/24 22:29:14    36s]     RC-Corner PostRoute Cap Factor        : 1
+[05/24 22:29:14    36s]     RC-Corner PostRoute XCap Factor       : 1
+[05/24 22:29:14    36s]     RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner PostRoute Clock Cap Factor  : 1   	[Derived from postRoute_cap (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner PostRoute Clock Res Factor  : 1   	[Derived from postRoute_res (effortLevel low)]
+[05/24 22:29:14    36s]     RC-Corner Technology file: '../techlibs/qrcTechFile'
+[05/24 22:29:14    36s] Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+[05/24 22:29:14    36s] *Info: initialize multi-corner CTS.
+[05/24 22:29:14    36s] CTE reading timing constraint file '../timing/prelayout.sdc' ...
+[05/24 22:29:14    36s] Current (total cpu=0:00:36.6, real=0:03:16, peak res=449.8M, current mem=587.9M)
+[05/24 22:29:14    36s] **WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../timing/prelayout.sdc, Line 9).
+[05/24 22:29:14    36s] 
+[05/24 22:29:14    36s] INFO (CTE): read_dc_script finished with 1 WARNING.
+[05/24 22:29:14    36s] WARNING (CTE-25): Line: 10 of File ../timing/prelayout.sdc : Skipped unsupported command: set_max_area
+[05/24 22:29:14    36s] 
+[05/24 22:29:14    36s] 
+[05/24 22:29:14    36s] WARNING (CTE-25): Line: 8 of File ../timing/prelayout.sdc : Skipped unsupported command: set_units
+[05/24 22:29:14    36s] 
+[05/24 22:29:14    36s] 
+[05/24 22:29:14    36s] Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=464.1M, current mem=601.4M)
+[05/24 22:29:14    37s] Current (total cpu=0:00:36.7, real=0:03:16, peak res=464.1M, current mem=601.4M)
+[05/24 22:29:14    37s] Total number of combinational cells: 315
+[05/24 22:29:14    37s] Total number of sequential cells: 152
+[05/24 22:29:14    37s] Total number of tristate cells: 10
+[05/24 22:29:14    37s] Total number of level shifter cells: 0
+[05/24 22:29:14    37s] Total number of power gating cells: 0
+[05/24 22:29:14    37s] Total number of isolation cells: 0
+[05/24 22:29:14    37s] Total number of power switch cells: 0
+[05/24 22:29:14    37s] Total number of pulse generator cells: 0
+[05/24 22:29:14    37s] Total number of always on buffers: 0
+[05/24 22:29:14    37s] Total number of retention cells: 0
+[05/24 22:29:14    37s] List of usable buffers: BUFX2LVT BUFX12LVT BUFX16LVT BUFX20LVT CLKBUFX2LVT BUFX3LVT BUFX4LVT BUFX6LVT BUFX8LVT CLKBUFX12LVT CLKBUFX16LVT CLKBUFX20LVT CLKBUFX3LVT CLKBUFX4LVT CLKBUFX6LVT CLKBUFX8LVT
+[05/24 22:29:14    37s] Total number of usable buffers: 16
+[05/24 22:29:14    37s] List of unusable buffers:
+[05/24 22:29:14    37s] Total number of unusable buffers: 0
+[05/24 22:29:14    37s] List of usable inverters: CLKINVX1LVT CLKINVX2LVT CLKINVX12LVT CLKINVX16LVT CLKINVX20LVT CLKINVX4LVT CLKINVX3LVT CLKINVX6LVT CLKINVX8LVT INVX1LVT INVX2LVT INVX12LVT INVX16LVT INVX20LVT INVXLLVT INVX3LVT INVX4LVT INVX6LVT INVX8LVT
+[05/24 22:29:14    37s] Total number of usable inverters: 19
+[05/24 22:29:14    37s] List of unusable inverters:
+[05/24 22:29:14    37s] Total number of unusable inverters: 0
+[05/24 22:29:14    37s] List of identified usable delay cells: DLY1X1LVT DLY1X4LVT DLY2X1LVT DLY2X4LVT DLY3X1LVT DLY3X4LVT DLY4X1LVT DLY4X4LVT
+[05/24 22:29:14    37s] Total number of identified usable delay cells: 8
+[05/24 22:29:14    37s] List of identified unusable delay cells:
+[05/24 22:29:14    37s] Total number of identified unusable delay cells: 0
+[05/24 22:29:14    37s] 
+[05/24 22:29:14    37s] *** Summary of all messages that are not suppressed in this session:
+[05/24 22:29:14    37s] Severity  ID               Count  Summary                                  
+[05/24 22:29:14    37s] WARNING   ENCLF-155            6  ViaRule only supports routing/cut layer,...
+[05/24 22:29:14    37s] WARNING   ENCLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[05/24 22:29:14    37s] WARNING   ENCFP-3961           3  The techSite '%s' has no related cells i...
+[05/24 22:29:14    37s] ERROR     ENCOAX-820           1  The OA features are disabled in the curr...
+[05/24 22:29:14    37s] ERROR     ENCOAX-850           1  %s command cannot be run as OA features ...
+[05/24 22:29:14    37s] *** Message Summary: 10 warning(s), 2 error(s)
+[05/24 22:29:14    37s] 
+[05/24 22:29:16    37s] <CMD> fit
+[05/24 22:29:19    37s] <CMD> getIoFlowFlag
+[05/24 22:29:53    41s] <CMD> setIoFlowFlag 0
+[05/24 22:29:53    41s] <CMD> floorPlan -site CoreSite -r 0.992807867312 0.699991 15 15 15 15
+[05/24 22:29:53    41s] <CMD> uiSetTool select
+[05/24 22:29:53    41s] <CMD> getIoFlowFlag
+[05/24 22:29:53    41s] <CMD> fit
+[05/24 22:29:57    42s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:30:18    44s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:34:20    74s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:35:14    80s] <CMD> zoomIn
+[05/24 22:35:15    81s] <CMD> fit
+[05/24 22:35:41    84s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:38:51   105s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:55:31   222s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:56:23   229s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:57:13   235s] <CMD> getPinAssignMode -pinEditInBatch -quiet
+[05/24 22:58:34   247s] <CMD> setPinAssignMode -pinEditInBatch true
+[05/24 22:58:34   247s] <CMD> editPin -fixedPin 1 -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType start -spacing 0.2 -start 0.0 0.0 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+[05/24 22:58:34   247s] Successfully spread [8] pins.
+[05/24 22:58:34   247s] editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 611.8M).
+[05/24 22:58:34   247s] <CMD> setPinAssignMode -pinEditInBatch false
+[05/24 23:01:15   264s] 
+[05/24 23:01:15   264s] *** Memory Usage v#1 (Current mem = 608.805M, initial mem = 97.324M) ***
+[05/24 23:01:15   264s] 
+[05/24 23:01:15   264s] *** Summary of all messages that are not suppressed in this session:
+[05/24 23:01:15   264s] Severity  ID               Count  Summary                                  
+[05/24 23:01:15   264s] WARNING   ENCLF-155            6  ViaRule only supports routing/cut layer,...
+[05/24 23:01:15   264s] WARNING   ENCLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+[05/24 23:01:15   264s] WARNING   ENCFP-3961           3  The techSite '%s' has no related cells i...
+[05/24 23:01:15   264s] ERROR     ENCOAX-142           2  %s                                       
+[05/24 23:01:15   264s] ERROR     ENCOAX-820           1  The OA features are disabled in the curr...
+[05/24 23:01:15   264s] ERROR     ENCOAX-850           1  %s command cannot be run as OA features ...
+[05/24 23:01:15   264s] *** Message Summary: 10 warning(s), 4 error(s)
+[05/24 23:01:15   264s] 
+[05/24 23:01:15   264s] --- Ending "Encounter" (totcpu=0:04:24, real=0:35:17, mem=608.8M) ---

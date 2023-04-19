@@ -1,0 +1,48 @@
+\chapter{Report}\label{chapter2}
+\section{30th May: Synthesis report}
+During the syntehsis, I browsed the report about Power, Constraints and Timing path.
+
+Especially in timing report, there are max 10 worst paths in the design which provides direction
+to optimize the logic behind.
+5 out of 10 paths are related to PC\_tot[1](configuration) and fsmPC(from bit 7 to bit 3) in FSM, which is the signal to count PC.
+Other 5 paths starts from instr\_wr to resultOutMem in FSM. Definitly it should happen when the test process switch the instr\_wr from reading mode
+to calulcation mode.
+Besides, I still have two latches  on the resultOutMem\_reg and resultOutReg\_reg. These are output port of FSM
+to the RAM or register W. The result input will be assigned to one of them depending on the value of output selector which is judged 
+by the instrction type. I havn't find the way avoid this latch without calcaulation errors on result. So I decided to keep them because
+the correct behaviour of circuit is the first priority instead of reliability. 
+
+\section{30th May: Formality history}
+The formality alets that some signals are not in the part of process sensitivity list such as ``current\_state'', ``Instruction'',``fsmPC'' and so on.
+These are the internal signals I used in two synchronous process. It is because I want to simply the FSM process strucure by dividing it into
+two processes. One is for assigning output select and reading\_writing mode switch, another one is for executing other assignments in specific status.
+So I decided to add them only into process sensitivity list.
+
+\section{30th May: Static timing synthesis report}
+I browsed the setup\_viol report, and found these paths with violations:
+\begin{enumerate}
+    \item FE\_PHC6961\_DUT3\_N359  : input\_select in FSM,  actua transition takes 0.32
+    \item DUT2\_instruction\_array\_1844 : instruction array in RAM, actual transition takes 0.29
+\end{enumerate}
+
+In hold\_vio report, the violoated pin and the transition are the same as in setup. 
+And the check report for setup is indicating that the wost paths on timing are the same as in DC analysis.
+8 out of 10 are related to the path from PC\_tot to FMS's fsmPC signal.  Other two are related to the path from
+instr\_wr to resultOutMme.
+Differently in check report for hold phase, seven critial paths are starting from the RAM's signal ``insruction\_array'' to itself, 2 are starting from RAM's output port ``d\_out'' 
+ to itself, which is confusing. 
+One is in FSM, from ``insturction\_type'' to ``o\_select''(output selector), which is understandable.
+
+
+The power report for hold and setup session are not visiable becasue the site is not licensed for `PrimeTime-PX'
+so it cannot proceed without power anaysis feature.
+
+
+\cite{Godoy_2012}. 
+%
+%Bibliography will be generated
+%automatically. Use JabRef to manage your bibliography database. The bibliography is stored in this example in the bibliography.bib file.
+
+
+
+

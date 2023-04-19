@@ -1,0 +1,307 @@
+CRTE_SNAPSHOT_START
+
+SECTION_CRTE_VERSION
+3.0
+
+SECTION_PID
+7509
+
+SECTION_POLLING_INTERVAL
+5
+
+SECTION_DATE_TIME
+Sun May 22 17:50:24 EEST 2022 (1653231024)
+
+SECTION_OS_VERSION
+osname: Linux
+hostname: vspace.ecdl.hut.fi
+arch: x86_64
+release_version: 3.10.0-1160.59.1.el7.x86_64
+
+SECTION_IPC_INFO
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 0          zabbix     600        576        6          dest         
+0x00000000 1          zabbix     600        657056     6          dest         
+0x00000000 32770      aontrone   600        393216     2          dest         
+0x00000000 7897091    trontti    600        393216     1          dest         
+0x00000000 32772      aontrone   600        393216     2          dest         
+0x00000000 32773      aontrone   600        12288      2          dest         
+0x00000000 8060934    sruuskan   600        393216     2          dest         
+0x00000000 32775      aontrone   600        12288      2          dest         
+0x00000000 262152     osimola    600        393216     2          dest         
+0x00000000 32777      aontrone   600        393216     2         SECTION_ULIMIT
+core file size          (blocks, -c) 0
+data seg size           (kbytes, -d) unlimited
+scheduling priority             (-e) 0
+file size               (blocks, -f) unlimited
+pending signals                 (-i) 256931
+max locked memory       (kbytes, -l) 64
+max memory size         (kbytes, -m) unlimited
+open files                      (-n) 4096
+pipe size            (512 bytes, -p) 8
+POSIX message queues     (bytes, -q) 819200
+real-time priority              (-r) 0
+stack size              (kbytes, -s) 8200
+cpu time               (seconds, -t) unlimited
+max user processes              (-u) 4096
+virtual memory          (kbytes, -v) unlimited
+file locks                      (-x) unlimited
+
+SECTION_SYSCONF
+_SC_THREAD_SAFE_FUNCTIONS= 200809
+_SC_CLK_TCK= 100
+_SC_OPEN_MAX= 4096
+_SC_PAGE_SIZE= 4096
+_SC_ARG_MAX= 2099200
+_SC_CHILD_MAX= 4096
+_SC_LINE_MAX= 2048
+
+SECTION_FULL_COMMAND
+/prog/synopsys/syn/K-2015.06-SP4/linux64/syn/bin/common_shell_exec -shell design_vision -r /prog/synopsys/syn/K-2015.06-SP4
+
+SECTION_CPUINFO
+total_core: 8
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+model_name:  Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz
+flags:  fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon nopl xtopology tsc_reliable nonstop_tsc eagerfpu pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch invpcid_single ssbd ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 invpcid rtm rdseed adx smap xsaveopt arat spec_ctrl intel_stibp flush_l1d arch_capabilities
+cpu_family: 6
+core_frequency_mhz: 2397
+core_per_socket: 0
+stepping: 1
+cache_size_kb: 25600
+ht: 0
+
+SECTION_OS_RELEASE_VERSION
+CentOS Linux release 7.9.2009 (Core)
+
+
+SECTION_QSC_CHECKER
+
+        qscchk.sh Version 1.6.3, 12 November 2014
+        qscchk.dat QSC K Rev: 17, 17 November 2014
+     Copyright (c) 1988-2014 by Synopsys, Inc.
+             All RIGHTS RESERVED
+
+ERROR: This does not appear to be a Synopsys supported Linux variant
+ERROR: Unable to determine Snps_Platform for this operating system.
+ERROR: Unknown Linux variant 'Unknown'
+ 
+No QSC information for the K Synopsys release, on the
+64 bit Unknown platform running the Unknown Operating System 
+could be found in datafile /tmp/sdp_7509_0/qscchk.dat
+ 
+
+Return code from the QSC checker script is 256
+
+SECTION_SYS/VM
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/block_dump:0
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:30
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/drop_caches:0
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/hugepages_treat_as_movable:0
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:67584
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:4096
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/nr_pdflush_threads:0
+/proc/sys/vm/numa_zonelist_order:default
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_fraction:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:30
+/proc/sys/vm/user_reserve_kbytes:131072
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/zone_reclaim_mode:0
+
+
+SECTION_SWAP
+swap_partition: /dev/sda2
+size_gb: 15
+
+CRTE_SNAPSHOT_END
+
+CRTE_PERIODIC_START 1 1653231024105
+
+SECTION_MPSTAT
+total_core: 8
+
+CPU     %user   %kernel %wait   %idle   
+all   24.480423 9.454905 0.055560 66.009109
+0     18.648661 4.506546 0.040169 76.804634
+1     22.468567 4.834229 0.043394 72.653809
+2     22.461615 4.835860 0.043620 72.658905
+3     19.361921 4.866004 0.190789 75.581284
+4     45.908222 42.896336 0.006377 11.189069
+5     22.244560 4.610815 0.040189 73.104439
+6     23.866993 4.398959 0.039541 71.694504
+7     20.727606 4.445750 0.040916 74.785736
+
+SECTION_PID_STATUS
+name: common_shell_ex
+state: 1
+vmsize: 1110152
+vmrss: 132952
+vmdata: 600212
+vmstk: 172
+vmexe: 247584
+vmlib: 14284
+threads: 1
+
+SECTION_PROCESS_CPU_UTIL
+pid: 7509
+cpu_total_time: 1320728174
+cpu_used_time: 968
+cpu_p: 
+
+SECTION_SYSTEM_CPU_UTIL
+sys_cpu_p: 
+
+SECTION_MEMINFO
+memtotal: 65807988
+memfree: 2794344
+cached: 17797504
+swapcached: 624
+active: 42296220
+swaptotal: 16777212
+swapfree: 16753920
+
+SECTION_SMAPS
+shared_kb: 43288
+private_kb: 89680
+
+SECTION_DF
+Filesystem  Size  Used Avail Use%
+filesystem        49G  0G  49G    1
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          26214400  18019 26196381   4294822015
+
+SECTION_CWD
+Filesystem  Size  Used Avail Use%
+filesystem        249G  177G  71G    71
+
+Filesystem    Inodes   IUsed   IFree   IUse%
+filesystem          131072000  2315852 128756148   4294965546
+
+SECTION_SWAP_RATE
+blk_read: 7056
+blk_wrtn: 47088
+swap_in_rate: 
+swap_out_rate: 
+swap_in_rate: 
+swap_out_rate: 
+
+SECTION_FD_SIZE
+files: 15
+total_size: 9031650
+
+SECTION_NET_INTERFACE
+total_eth_avbl: 1
+
+name net_rx_err net_rx_drp net_tx_err net_tx_drp 
+ens192:         0        0        0        0
+
+SECTION_NFSSTAT
+readlink: 0
+write: 0
+getattr: 36
+retrans: 0
+raw_data: 
+net 0 0 0 0
+rpc 10834838 0 10835903
+proc4 60 0 144581 0 0 65142 0 1050966 0 1038375 0 12 0 0 0 0 0 0 3329721 3901817 145791 4 0 0 0 0 12 8 24342 2625 85636 20 1035894 0 0 0 0 0 0 1 1 0 9949 0 1 0 0 0 0 4 0 0 0 0 0 0 0 0 0 0 0
+
+
+SECTION_THREAD_CPU_UTIL
+7509 : 7509 (common_shell_ex) R 25846 7509 25846 34842 7509 4202496 350943 129267 0 0 540 166 209 54 20 0 1 0 166251706 1136795648 33238 18446744073709551615 4194304 257717025 140730902226064 140730902178560 139827306026845 0 1024 2101248 1268477695 0 0 0 17 7 0 0 0 0 0 259817472 273379768 799318016 140730902228967 140730902229091 140730902229091 140730902233013 0
+
+CRTE_PERIODIC_END 1 1653231024105

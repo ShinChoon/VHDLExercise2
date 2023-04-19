@@ -1,0 +1,452 @@
+Checking out Encounter license ...
+	edsxl		DENIED:		"Encounter_Digital_Impl_Sys_XL"
+	edsl		DENIED:		"Encounter_Digital_Impl_Sys_L"
+	encblk		DENIED:		"Encounter_Block"
+	fegxl		DENIED:		"First_Encounter_GXL"
+	fexl		DENIED:		"FE_GPS"
+	nru		DENIED:		"NanoRoute_Ultra"
+	vdixl		DENIED:		"Virtuoso_Digital_Implem_XL"
+	vdi		DENIED:		"Virtuoso_Digital_Implem"
+	fel		DENIED:		"First_Encounter_VIP"
+	invsb		DENIED:		"Innovus_Impl_System_Basic"
+	invs		CHECKED OUT:	"Innovus_Impl_System"
+Innovus_Impl_System 15.1 license checkout succeeded.
+You can run 8 CPU jobs with the base license that is currently checked out.
+If required, use the setMultiCpuUsage command to enable multi-CPU processing.
+**ERROR: (ENCOAX-142):	Could not open shared library libfeoax22.so : liboaDesign.so: cannot open shared object file: No such file or directory
+
+**ERROR: (ENCOAX-142):	OA features will be disabled in this session.
+
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2014.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: Encounter v14.28-s033_1 (64bit) 03/21/2016 13:34 (Linux 2.6.18-194.el5)
+@(#)CDS: NanoRoute v14.28-s005 NR160313-1959/14_28-UB (database version 2.30, 267.6.1) {superthreading v1.25}
+@(#)CDS: CeltIC v14.28-s006_1 (64bit) 03/08/2016 00:08:23 (Linux 2.6.18-194.el5)
+@(#)CDS: AAE 14.28-s002 (64bit) 03/21/2016 (Linux 2.6.18-194.el5)
+@(#)CDS: CTE 14.28-s007_1 (64bit) Mar  7 2016 23:11:05 (Linux 2.6.18-194.el5)
+@(#)CDS: CPE v14.28-s006
+@(#)CDS: IQRC/TQRC 14.2.2-s217 (64bit) Wed Apr 15 23:10:24 PDT 2015 (Linux 2.6.18-194.el5)
+@(#)CDS: OA 22.50-p011 Tue Nov 11 03:24:55 2014
+@(#)CDS: SGN 10.10-p124 (19-Aug-2014) (64 bit executable)
+@(#)CDS: RCDB 11.5
+--- Starting "Encounter v14.28-s033_1" on Tue May 24 22:14:56 2022 (mem=94.3M) ---
+--- Running on vspace.ecdl.hut.fi (x86_64 w/Linux 3.10.0-1160.59.1.el7.x86_64) ---
+This version was compiled on Mon Mar 21 13:34:48 PDT 2016.
+Set DBUPerIGU to 1000.
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> create_rc_corner -name rc_basic -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {../techlibs/qrcTechFile}
+<CMD> create_library_set -name slow_libs -timing {../techlibs/slow.lib}
+<CMD> create_library_set -name fast_libs -timing {../techlibs/fast.lib}
+<CMD> create_constraint_mode -name constraint_basic -sdc_files {../timing/prelayout.sdc}
+<CMD> create_delay_corner -name slow_corner -library_set {slow_libs} -rc_corner {rc_basic}
+<CMD> create_delay_corner -name fast_corner -library_set {fast_libs} -rc_corner {rc_basic}
+<CMD> create_analysis_view -name setup_view -constraint_mode {constraint_basic} -delay_corner {slow_corner}
+<CMD> create_analysis_view -name hold_view -constraint_mode {constraint_basic} -delay_corner {fast_corner}
+<CMD> set_analysis_view -setup {setup_view} -hold {hold_view}
+**ERROR: (TCLCMD-1230):	The command set_analysis_view is called before the design is initialized and not from init_design.
+**ERROR: 
+<CMD> init_design
+**ERROR: (ENCOAX-820):	The OA features are disabled in the current session of Encounter because the oax shared library could not be loaded properly. This could be because your installation was not properly configured. To enable OA features, exit the current session and re-launch Encounter either after fixing your installation by running the Configure Installation phase, or after setting the OA_HOME variable to point to a proper OA installation. Check the "OpenAccess Installation and Configuration Guide" manual for more information.
+
+**ERROR: (ENCOAX-850):	oaxCreateCdsLibArray command cannot be run as OA features are disabled in this session.
+No LEF file provided, but timing lib is provided.
+Use timer mode.
+*** Begin netlist parsing (mem=344.1M) ***
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../netlist/serial_peripheral_interface.v'
+Module DFFSX2LVT is not defined and will be treated as an empty module.
+Module DFFSXLLVT is not defined and will be treated as an empty module.
+Module XNOR2X1LVT is not defined and will be treated as an empty module.
+Module OAI2BB1X1LVT is not defined and will be treated as an empty module.
+Module NOR2BX1LVT is not defined and will be treated as an empty module.
+Module OAI32X1LVT is not defined and will be treated as an empty module.
+Module NOR4X1LVT is not defined and will be treated as an empty module.
+Module OAI211X1LVT is not defined and will be treated as an empty module.
+Module NAND2X1LVT is not defined and will be treated as an empty module.
+Module NAND3X1LVT is not defined and will be treated as an empty module.
+Module NOR2X2LVT is not defined and will be treated as an empty module.
+Module INVXLLVT is not defined and will be treated as an empty module.
+Module NOR2X1LVT is not defined and will be treated as an empty module.
+Module NAND4XLLVT is not defined and will be treated as an empty module.
+Module NOR4BXLLVT is not defined and will be treated as an empty module.
+Module AOI221XLLVT is not defined and will be treated as an empty module.
+Module NOR4XLLVT is not defined and will be treated as an empty module.
+Module OAI32XLLVT is not defined and will be treated as an empty module.
+Module OAI221XLLVT is not defined and will be treated as an empty module.
+Module AOI31XLLVT is not defined and will be treated as an empty module.
+Module XNOR2XLLVT is not defined and will be treated as an empty module.
+Module AOI222XLLVT is not defined and will be treated as an empty module.
+Module OAI211XLLVT is not defined and will be treated as an empty module.
+Module AOI32XLLVT is not defined and will be treated as an empty module.
+Module OAI2BB1XLLVT is not defined and will be treated as an empty module.
+Module NOR2BXLLVT is not defined and will be treated as an empty module.
+Module CLKMX2X2LVT is not defined and will be treated as an empty module.
+Module AOI2BB2XLLVT is not defined and will be treated as an empty module.
+Module NAND2XLLVT is not defined and will be treated as an empty module.
+Module OAI31XLLVT is not defined and will be treated as an empty module.
+Module NOR3XLLVT is not defined and will be treated as an empty module.
+Module NAND4X1LVT is not defined and will be treated as an empty module.
+Module INVX3LVT is not defined and will be treated as an empty module.
+Module BUFX3LVT is not defined and will be treated as an empty module.
+Module TIELOLVT is not defined and will be treated as an empty module.
+Module AOI221X1LVT is not defined and will be treated as an empty module.
+Module NOR4BX1LVT is not defined and will be treated as an empty module.
+Module BUFX2LVT is not defined and will be treated as an empty module.
+Module AOI22XLLVT is not defined and will be treated as an empty module.
+Module OAI221X1LVT is not defined and will be treated as an empty module.
+Module AOI31X1LVT is not defined and will be treated as an empty module.
+Module OAI222XLLVT is not defined and will be treated as an empty module.
+Module NOR2XLLVT is not defined and will be treated as an empty module.
+Module OAI22XLLVT is not defined and will be treated as an empty module.
+Module AOI21XLLVT is not defined and will be treated as an empty module.
+Module TIEHILVT is not defined and will be treated as an empty module.
+Module AND2XLLVT is not defined and will be treated as an empty module.
+Module INVX1LVT is not defined and will be treated as an empty module.
+Module MX2XLLVT is not defined and will be treated as an empty module.
+Module OA21X1LVT is not defined and will be treated as an empty module.
+Module NAND3XLLVT is not defined and will be treated as an empty module.
+Module OAI21XLLVT is not defined and will be treated as an empty module.
+Module AOI211XLLVT is not defined and will be treated as an empty module.
+Module NAND2BXLLVT is not defined and will be treated as an empty module.
+Module NAND3BXLLVT is not defined and will be treated as an empty module.
+Module MXI2XLLVT is not defined and will be treated as an empty module.
+Module OR2XLLVT is not defined and will be treated as an empty module.
+Module AOI33XLLVT is not defined and will be treated as an empty module.
+Module AOI2BB1XLLVT is not defined and will be treated as an empty module.
+
+*** Memory Usage v#1 (Current mem = 353.102M, initial mem = 94.324M) ***
+*** End netlist parsing (cpu=0:00:00.3, real=0:00:00.0, mem=353.1M) ***
+Top level cell is microcontroller_interface_8_8.
+Loading view definition file from Default.view
+Reading slow_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AND2XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI211XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI21XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI221X1LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI221XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI222XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI22XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI2BB1XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI2BB2XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI31X1LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI31XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI32XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'AOI33XLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'BUFX2LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'BUFX3LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Y' of cell 'CLKMX2X2LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'DFFSX2LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'QN' of cell 'DFFSX2LVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'Q' of cell 'DFFSXLLVT' is not defined in the library.
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'QN' of cell 'DFFSXLLVT' is not defined in the library.
+Message <TECHLIB-436> has exceeded the message display limit of '20'. setMessageLimit/set_message_limit sets the limit. unsetMessageLimit/unset_message_limit can be used to reset this.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'XNOR2XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A' of cell 'XNOR2XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'B' of cell 'XNOR2XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'XNOR2X1LVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A' of cell 'XNOR2X1LVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'B' of cell 'XNOR2X1LVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'TIELOLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'TIEHILVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'OR2XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A' of cell 'OR2XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'B' of cell 'OR2XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'OAI32XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A0' of cell 'OAI32XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A1' of cell 'OAI32XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A2' of cell 'OAI32XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'B0' of cell 'OAI32XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'B1' of cell 'OAI32XLLVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'Y' of cell 'OAI32X1LVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A0' of cell 'OAI32X1LVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (ENCTS-414):	There is mismatch in pin direction for the pin 'A1' of cell 'OAI32X1LVT' specified in LEF or Verilog, and the timing library. The timing library value will be used.
+**WARN: (EMS-63):	Message <ENCTS-414> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+Read 59 cells in library 'slow_vdd1v0' 
+Ignored 421 cells in library 'slow_vdd1v0' because they are not defined in the LEF file, and they are not used in the Verilog netlist.
+Reading fast_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v0_basicCells_lvt.lib' ...
+Read 59 cells in library 'fast_vdd1v0' 
+Ignored 421 cells in library 'fast_vdd1v0' because they are not defined in the LEF file, and they are not used in the Verilog netlist.
+*** End library_loading (cpu=0.00min, mem=0.0M, fe_cpu=0.35min, fe_real=1.72min, fe_mem=368.6M) ***
+Starting recursive module instantiation check.
+No recursion found.
+Term dir updated for 14077 vinsts of 59 cells.
+Building hierarchical netlist for Cell microcontroller_interface_8_8 ...
+*** Netlist is unique.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__0_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__1_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__2_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__3_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__4_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__5_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__6_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__7_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__8_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__9_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__10_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__11_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__12_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_255__13_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_254__1_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_254__2_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_254__3_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_254__4_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_254__5_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (ENCREPO-102):	Instance DUT2_instruction_array_reg_254__6_ of the cell DFFSX2LVT has no physical library or has wrong dimen-
+sion values (<=0). Check your design setup to make sure the physical
+ library is loaded in and the attributes specified in physical library are correct.
+**WARN: (EMS-63):	Message <ENCREPO-102> has exceeded the default message display limit of 20.
+To avoid this warning, increase the display limit per unique message by
+using the set_message -limit <number> command.
+The message limit can be removed by using the set_message -no_limit command.
+Note that setting a very large number using the set_message -limit command
+or removing the message limit using the set_message -no_limit command can
+significantly increase the log file size.
+To suppress a message, use the set_message -suppress command.
+** info: there are 119 modules.
+** info: there are 14075 stdCell insts.
+** info: there are 2 Pad insts.
+**WARN: (ENCREPO-103):	There are 14077 instances (59 cells) with no dimension defined.
+
+*** Memory Usage v#1 (Current mem = 381.586M, initial mem = 94.324M) ***
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Input Pin Transition Delay as 0.1 ps.
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Importing multi-corner technology file(s) for preRoute extraction...
+../techlibs/qrcTechFile
+Completed (cpu: 0:00:02.4 real: 0:00:02.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: setup_view
+    RC-Corner Name        : rc_basic
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1   	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1   	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../techlibs/qrcTechFile'
+ 
+ Analysis View: hold_view
+    RC-Corner Name        : rc_basic
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1
+    RC-Corner PostRoute Cap Factor        : 1
+    RC-Corner PostRoute XCap Factor       : 1
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1   	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1   	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../techlibs/qrcTechFile'
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+CTE reading timing constraint file '../timing/prelayout.sdc' ...
+Current (total cpu=0:00:24.0, real=0:01:46, peak res=376.0M, current mem=512.1M)
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../timing/prelayout.sdc, Line 9).
+
+INFO (CTE): read_dc_script finished with 1 WARNING.
+WARNING (CTE-25): Line: 10 of File ../timing/prelayout.sdc : Skipped unsupported command: set_max_area
+
+
+WARNING (CTE-25): Line: 8 of File ../timing/prelayout.sdc : Skipped unsupported command: set_units
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=390.6M, current mem=525.6M)
+Current (total cpu=0:00:24.1, real=0:01:46, peak res=390.6M, current mem=525.6M)
+Total number of combinational cells: 55
+Total number of sequential cells: 2
+Total number of tristate cells: 0
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX3LVT BUFX2LVT
+Total number of usable buffers: 2
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: INVX1LVT INVXLLVT INVX3LVT
+Total number of usable inverters: 3
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells:
+Total number of identified usable delay cells: 0
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+No delay cells were detected in the set of buffers. Buffers will be used to fix hold violations.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCTS-414          248  There is mismatch in pin direction for t...
+WARNING   ENCREPO-102      14077  Instance %s of the cell %s has no physic...
+WARNING   ENCREPO-103          1  There are %d instances (%d cells) with n...
+ERROR     ENCOAX-820           1  The OA features are disabled in the curr...
+ERROR     ENCOAX-850           1  %s command cannot be run as OA features ...
+*** Message Summary: 14326 warning(s), 2 error(s)
+
+<CMD> fit
+<CMD> set init_gnd_net vss!
+<CMD> set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+<CMD> set init_design_settop 0
+<CMD> set init_pwr_net vdd!
+<CMD> init_design
+**WARN: (ENCSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCSYT-7329          1  Cannot load design with init_design, aft...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> fit
+<CMD> create_rc_corner -name rc_basic -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {../techlibs/qrcTechFile}
+<CMD> create_library_set -name slow_libs -timing {../techlibs/slow.lib}
+<CMD> create_library_set -name fast_libs -timing {../techlibs/fast.lib}
+<CMD> create_constraint_mode -name constraint_basic -sdc_files {../timing/prelayout.sdc}
+<CMD> create_delay_corner -name slow_corner -library_set {slow_libs} -rc_corner {rc_basic}
+<CMD> create_delay_corner -name fast_corner -library_set {fast_libs} -rc_corner {rc_basic}
+<CMD> create_analysis_view -name setup_view -constraint_mode {constraint_basic} -delay_corner {slow_corner}
+<CMD> create_analysis_view -name hold_view -constraint_mode {constraint_basic} -delay_corner {fast_corner}
+<CMD> set_analysis_view -setup {setup_view} -hold {hold_view}
+<CMD> create_rc_corner -name rc_basic -preRoute_res {1.0} -preRoute_cap {1.0} -preRoute_clkres {0.0} -preRoute_clkcap {0.0} -postRoute_res {1.0} -postRoute_cap {1.0} -postRoute_xcap {1.0} -postRoute_clkres {0.0} -postRoute_clkcap {0.0} -qx_tech_file {../techlibs/qrcTechFile}
+<CMD> create_library_set -name slow_libs -timing {../techlibs/slow.lib}
+<CMD> create_library_set -name fast_libs -timing {../techlibs/fast.lib}
+<CMD> create_constraint_mode -name constraint_basic -sdc_files {../timing/prelayout.sdc}
+<CMD> create_delay_corner -name slow_corner -library_set {slow_libs} -rc_corner {rc_basic}
+<CMD> create_delay_corner -name fast_corner -library_set {fast_libs} -rc_corner {rc_basic}
+<CMD> create_analysis_view -name setup_view -constraint_mode {constraint_basic} -delay_corner {slow_corner}
+<CMD> create_analysis_view -name hold_view -constraint_mode {constraint_basic} -delay_corner {fast_corner}
+<CMD> set_analysis_view -setup {setup_view} -hold {hold_view}
+<CMD> set init_gnd_net vss!
+<CMD> set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+<CMD> set init_design_settop 0
+<CMD> set init_pwr_net vdd!
+<CMD> init_design
+**WARN: (ENCSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCSYT-7329          1  Cannot load design with init_design, aft...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+<CMD> setBottomIoPadOrient {}
+**WARN: (ENCSYC-811):	Undefined side  for global IoPad PinSide
+<CMD> setBottomIoPadOrient {}
+**WARN: (ENCSYC-811):	Undefined side  for global IoPad PinSide
+<CMD> set init_gnd_net vss!
+<CMD> set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+<CMD> set init_pwr_net vdd!
+<CMD> init_design
+**WARN: (ENCSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   ENCSYT-7329          1  Cannot load design with init_design, aft...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+<CMD> setBottomIoPadOrient {}
+**WARN: (ENCSYC-811):	Undefined side  for global IoPad PinSide
+<CMD> setBottomIoPadOrient {}
+**WARN: (ENCSYC-811):	Undefined side  for global IoPad PinSide
+**ERROR: (ENCQTF-4044):	Error happens when execute '::Rda_FloorPlan::SpecFPlan::apply  apply' with error message: ''.This is probably an inner GUI action error.Use direct TCL command instead of GUI interactive.
+<CMD> setBottomIoPadOrient {}
+**WARN: (ENCSYC-811):	Undefined side  for global IoPad PinSide
+
+*** Memory Usage v#1 (Current mem = 529.203M, initial mem = 94.324M) ***
+*** Message Summary: 14334 warning(s), 5 error(s)
+
+--- Ending "Encounter" (totcpu=0:01:51, real=0:11:05, mem=529.2M) ---

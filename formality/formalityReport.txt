@@ -1,0 +1,121 @@
+Formality (setup)> source -echo -verbose verify_synthesis.tcl
+set_svf -append { /home/xzhong/E3540/synthesis/default.svf } 
+SVF set to '/home/xzhong/E3540/synthesis/default.svf'.
+1
+read_vhdl -container r -libname WORK -93 { /home/xzhong/E3540/vhdl/ALU.vhd /home/xzhong/E3540/vhdl/FSM.vhd /home/xzhong/E3540/vhdl/InstructionSet.vhd /home/xzhong/E3540/vhdl/microcontroller_interface.vhd /home/xzhong/E3540/vhdl/MUX.vhd /home/xzhong/E3540/v...
+Loading vhdl file '/home/xzhong/E3540/vhdl/InstructionSet.vhd'
+Current container set to 'r'
+Loading vhdl file '/home/xzhong/E3540/vhdl/ALU.vhd'
+Loading vhdl file '/home/xzhong/E3540/vhdl/FSM.vhd'
+Loading vhdl file '/home/xzhong/E3540/vhdl/microcontroller_interface.vhd'
+Loading vhdl file '/home/xzhong/E3540/vhdl/MUX.vhd'
+Loading vhdl file '/home/xzhong/E3540/vhdl/RAM.vhd'
+1
+set_top r:/WORK/microcontroller_interface 
+Setting top design to 'r:/WORK/microcontroller_interface'
+Status:   Elaborating design microcontroller_interface   ...  
+Status:   Elaborating design ALU  length=8 ...  
+Information: Created design named 'ALU_8'. (FE-LINK-13)
+Status:   Elaborating design RAM  depth=8, length=8 ...  
+Information: Created design named 'RAM_8_8'. (FE-LINK-13)
+Status:   Elaborating design FSM  depth=8, length=8 ...  
+Information: Created design named 'FSM_8_8'. (FE-LINK-13)
+Status:   Elaborating design MUX  length=8 ...  
+Information: Created design named 'MUX_8'. (FE-LINK-13)
+Status:  Implementing inferred operators...
+Top design successfully set to 'r:/WORK/microcontroller_interface'
+Reference design set to 'r:/WORK/microcontroller_interface'
+1
+read_verilog -container i -libname WORK -05 { /home/xzhong/E3540/netlist/microcontroller_interface_8_8.v } 
+Loading verilog file '/home/xzhong/E3540/netlist/microcontroller_interface_8_8.v'
+Current container set to 'i'
+1
+read_db -container i { /home/xzhong/E3540/techlibs/slow.db } 
+Loading db file '/home/xzhong/E3540/techlibs/slow.db'
+1
+set_top i:/WORK/microcontroller_interface_8_8 
+Setting top design to 'i:/WORK/microcontroller_interface_8_8'
+Status:  Implementing inferred operators...
+
+************ Library Checking Summary ************
+Warning:  470 unlinked power cell(s) with no power down functions on outputs.
+Warning:  144 unlinked power cell(s) with no power down function on an ff or latch.
+        Use 'report_libraries -defects all' for more details.
+**************************************************
+
+Top design successfully set to 'i:/WORK/microcontroller_interface_8_8'
+Implementation design set to 'i:/WORK/microcontroller_interface_8_8'
+1
+match 
+Reference design is 'r:/WORK/microcontroller_interface'
+Implementation design is 'i:/WORK/microcontroller_interface_8_8'
+Status:  Checking designs...
+Status:  Building verification models...
+Imp top is microcontroller_interface_8_8 ; Ref top is microcontroller_interface 
+Status:  Processing Guide Commands...
+
+***************************** Guidance Summary *****************************
+                                         Status
+Command                 Accepted   Rejected  Unsupported  Unprocessed  Total
+----------------------------------------------------------------------------
+change_names        :         14          0          0          0         14
+environment         :          3          0          0          0          3
+instance_map        :          4          0          0          0          4
+inv_push            :       5650          0          0          0       5650
+mark                :          6          0          0          0          6
+reg_constant        :       1025          0          0          0       1025
+replace             :          1          0          0          0          1
+ungroup             :          6          0          0          0          6
+
+SVF files read:
+      /home/xzhong/E3540/synthesis/default.svf
+
+SVF files produced:
+  /home/xzhong/E3540/formality/formality1_svf/
+    svf.txt
+****************************************************************************
+
+Status:  Matching...
+
+*********************************** Matching Results ***********************************
+ 4761 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 25 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+ 1172(0) Unmatched reference(implementation) unread points
+****************************************************************************************
+
+1
+verify 
+Reference design is 'r:/WORK/microcontroller_interface_8_8'
+Implementation design is 'i:/WORK/microcontroller_interface_8_8'
+
+*********************************** Matching Results ***********************************
+ 4761 Compare points matched by name
+ 0 Compare points matched by signature analysis
+ 0 Compare points matched by topology
+ 25 Matched primary inputs, black-box outputs
+ 0(0) Unmatched reference(implementation) compare points
+ 0(0) Unmatched reference(implementation) primary inputs, black-box outputs
+ 1172(0) Unmatched reference(implementation) unread points
+****************************************************************************************
+
+Status:  Verifying...
+
+********************************* Verification Results *********************************
+Verification SUCCEEDED
+----------------------
+ Reference design: r:/WORK/microcontroller_interface_8_8
+ Implementation design: i:/WORK/microcontroller_interface_8_8
+ 4761 Passing compare points
+----------------------------------------------------------------------------------------
+Matched Compare Points     BBPin    Loop   BBNet     Cut    Port     DFF     LAT   TOTAL
+----------------------------------------------------------------------------------------
+Passing (equivalent)           0       0       0       0      50    4711       0    4761
+Failing (not equivalent)       0       0       0       0       0       0       0       0
+****************************************************************************************
+1
+1
+

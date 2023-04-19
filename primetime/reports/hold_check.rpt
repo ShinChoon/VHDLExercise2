@@ -1,0 +1,325 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-slack_lesser_than 10.00
+	-max_paths 10
+	-sort_by slack
+Design : microcontroller_interface_8_8
+Version: K-2015.12
+Date   : Mon May 30 23:50:07 2022
+****************************************
+
+
+  Startpoint: DUT2_instruction_array_reg_149__0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_149__0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_149__0_/CK (DFFSX1LVT)       0.00       0.28 r
+  DUT2_instruction_array_reg_149__0_/QN (DFFSX1LVT)       0.20 &     0.48 r
+  U7904/Y (AOI22XLLVT)                                    0.05 &     0.53 f
+  DUT2_instruction_array_reg_149__0_/D (DFFSX1LVT)        0.00 &     0.53 f
+  data arrival time                                                  0.53
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.02      -0.02
+  clock reconvergence pessimism                           0.00      -0.02
+  DUT2_instruction_array_reg_149__0_/CK (DFFSX1LVT)                 -0.02 r
+  library hold time                                       0.01      -0.01
+  data required time                                                -0.01
+  ------------------------------------------------------------------------------
+  data required time                                                -0.01
+  data arrival time                                                 -0.53
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: DUT2_instruction_array_reg_10__0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_10__0_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_10__0_/CK (DFFSX1LVT)        0.00       0.28 r
+  DUT2_instruction_array_reg_10__0_/QN (DFFSX1LVT)        0.21 &     0.49 r
+  U9961/Y (AOI22XLLVT)                                    0.05 &     0.54 f
+  DUT2_instruction_array_reg_10__0_/D (DFFSX1LVT)         0.00 &     0.54 f
+  data arrival time                                                  0.54
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_10__0_/CK (DFFSX1LVT)                  -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.54
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: DUT2_instruction_array_reg_102__9_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_102__9_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_102__9_/CK (DFFSX1LVT)       0.00       0.28 r
+  DUT2_instruction_array_reg_102__9_/QN (DFFSX1LVT)       0.21 &     0.49 r
+  U10029/Y (AOI22XLLVT)                                   0.05 &     0.54 f
+  DUT2_instruction_array_reg_102__9_/D (DFFSX1LVT)        0.00 &     0.54 f
+  data arrival time                                                  0.54
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_102__9_/CK (DFFSX1LVT)                 -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.54
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: DUT2_instruction_array_reg_124__6_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_124__6_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_124__6_/CK (DFFSX1LVT)       0.00       0.28 r
+  DUT2_instruction_array_reg_124__6_/QN (DFFSX1LVT)       0.21 &     0.49 r
+  U16256/Y (AOI22XLLVT)                                   0.05 &     0.54 f
+  DUT2_instruction_array_reg_124__6_/D (DFFSX1LVT)        0.00 &     0.54 f
+  data arrival time                                                  0.54
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_124__6_/CK (DFFSX1LVT)                 -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.54
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: DUT2_instruction_array_reg_102__1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_102__1_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_102__1_/CK (DFFSX1LVT)       0.00       0.28 r
+  DUT2_instruction_array_reg_102__1_/QN (DFFSX1LVT)       0.21 &     0.49 r
+  U8889/Y (AOI22XLLVT)                                    0.05 &     0.55 f
+  DUT2_instruction_array_reg_102__1_/D (DFFSX1LVT)        0.00 &     0.55 f
+  data arrival time                                                  0.55
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_102__1_/CK (DFFSX1LVT)                 -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.55
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.54
+
+
+  Startpoint: DUT2_instruction_array_reg_196__12_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_196__12_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_196__12_/CK (DFFSX1LVT)      0.00       0.28 r
+  DUT2_instruction_array_reg_196__12_/QN (DFFSX1LVT)      0.21 &     0.49 r
+  U14764/Y (AOI22XLLVT)                                   0.05 &     0.55 f
+  DUT2_instruction_array_reg_196__12_/D (DFFSX1LVT)       0.00 &     0.55 f
+  data arrival time                                                  0.55
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_196__12_/CK (DFFSX1LVT)                -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.55
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: DUT2_instruction_array_reg_106__9_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_106__9_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.29       0.29
+  DUT2_instruction_array_reg_106__9_/CK (DFFSX1LVT)       0.00       0.29 r
+  DUT2_instruction_array_reg_106__9_/QN (DFFSX1LVT)       0.21 &     0.49 r
+  U8931/Y (AOI22XLLVT)                                    0.06 &     0.55 f
+  DUT2_instruction_array_reg_106__9_/D (DFFSX1LVT)        0.00 &     0.55 f
+  data arrival time                                                  0.55
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_106__9_/CK (DFFSX1LVT)                 -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.55
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: DUT2_instruction_array_reg_237__2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_237__2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_237__2_/CK (DFFSX1LVT)       0.00       0.28 r
+  DUT2_instruction_array_reg_237__2_/QN (DFFSX1LVT)       0.21 &     0.49 r
+  U15313/Y (AOI22XLLVT)                                   0.06 &     0.54 f
+  DUT2_instruction_array_reg_237__2_/D (DFFSX1LVT)        0.00 &     0.54 f
+  data arrival time                                                  0.54
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.02      -0.02
+  clock reconvergence pessimism                           0.00      -0.02
+  DUT2_instruction_array_reg_237__2_/CK (DFFSX1LVT)                 -0.02 r
+  library hold time                                       0.01      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.54
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: DUT2_instruction_array_reg_92__2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_92__2_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_92__2_/CK (DFFSX1LVT)        0.00       0.28 r
+  DUT2_instruction_array_reg_92__2_/QN (DFFSX1LVT)        0.21 &     0.49 r
+  U16379/Y (AOI22XLLVT)                                   0.06 &     0.55 f
+  DUT2_instruction_array_reg_92__2_/D (DFFSX1LVT)         0.00 &     0.55 f
+  data arrival time                                                  0.55
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_92__2_/CK (DFFSX1LVT)                  -0.01 r
+  library hold time                                       0.01      -0.00
+  data required time                                                -0.00
+  ------------------------------------------------------------------------------
+  data required time                                                -0.00
+  data arrival time                                                 -0.55
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+
+  Startpoint: DUT2_instruction_array_reg_146__6_
+               (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: DUT2_instruction_array_reg_146__6_
+               (rising edge-triggered flip-flop clocked by clk)
+  Last common pin: clk
+  Path Group: clk
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                        0.28       0.28
+  DUT2_instruction_array_reg_146__6_/CK (DFFSX1LVT)       0.00       0.28 r
+  DUT2_instruction_array_reg_146__6_/QN (DFFSX1LVT)       0.21 &     0.49 r
+  U9275/Y (AOI22XLLVT)                                    0.06 &     0.55 f
+  DUT2_instruction_array_reg_146__6_/D (DFFSX1LVT)        0.00 &     0.55 f
+  data arrival time                                                  0.55
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (propagated)                       -0.01      -0.01
+  clock reconvergence pessimism                           0.00      -0.01
+  DUT2_instruction_array_reg_146__6_/CK (DFFSX1LVT)                 -0.01 r
+  library hold time                                       0.01       0.00
+  data required time                                                 0.00
+  ------------------------------------------------------------------------------
+  data required time                                                 0.00
+  data arrival time                                                 -0.55
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.55
+
+Warning: report_timing has satisfied the max_paths criteria. There are 4786 further endpoints which have paths of interest with slack less than    10.00 that were not considered when generating this report. (UITE-502)
+
+1

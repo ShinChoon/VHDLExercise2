@@ -1,0 +1,1168 @@
+ACHCONX2LVT#PWR
+  port CON : no power_down_function
+ADDFHX1LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFHX2LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFHX4LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFHXLLVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFX1LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFX2LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFX4LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDFXLLVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDHX1LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDHX2LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDHX4LVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+ADDHXLLVT#PWR
+  port CO : no power_down_function
+  port S : no power_down_function
+AND2X1LVT#PWR
+  port Y : no power_down_function
+AND2X2LVT#PWR
+  port Y : no power_down_function
+AND2X4LVT#PWR
+  port Y : no power_down_function
+AND2X6LVT#PWR
+  port Y : no power_down_function
+AND2X8LVT#PWR
+  port Y : no power_down_function
+AND2XLLVT#PWR
+  port Y : no power_down_function
+AND3X1LVT#PWR
+  port Y : no power_down_function
+AND3X2LVT#PWR
+  port Y : no power_down_function
+AND3X4LVT#PWR
+  port Y : no power_down_function
+AND3X6LVT#PWR
+  port Y : no power_down_function
+AND3X8LVT#PWR
+  port Y : no power_down_function
+AND3XLLVT#PWR
+  port Y : no power_down_function
+AND4X1LVT#PWR
+  port Y : no power_down_function
+AND4X2LVT#PWR
+  port Y : no power_down_function
+AND4X4LVT#PWR
+  port Y : no power_down_function
+AND4X6LVT#PWR
+  port Y : no power_down_function
+AND4X8LVT#PWR
+  port Y : no power_down_function
+AND4XLLVT#PWR
+  port Y : no power_down_function
+AO21X1LVT#PWR
+  port Y : no power_down_function
+AO21X2LVT#PWR
+  port Y : no power_down_function
+AO21X4LVT#PWR
+  port Y : no power_down_function
+AO21XLLVT#PWR
+  port Y : no power_down_function
+AO22X1LVT#PWR
+  port Y : no power_down_function
+AO22X2LVT#PWR
+  port Y : no power_down_function
+AO22X4LVT#PWR
+  port Y : no power_down_function
+AO22XLLVT#PWR
+  port Y : no power_down_function
+AOI211X1LVT#PWR
+  port Y : no power_down_function
+AOI211X2LVT#PWR
+  port Y : no power_down_function
+AOI211X4LVT#PWR
+  port Y : no power_down_function
+AOI211XLLVT#PWR
+  port Y : no power_down_function
+AOI21X1LVT#PWR
+  port Y : no power_down_function
+AOI21X2LVT#PWR
+  port Y : no power_down_function
+AOI21X4LVT#PWR
+  port Y : no power_down_function
+AOI21XLLVT#PWR
+  port Y : no power_down_function
+AOI221X1LVT#PWR
+  port Y : no power_down_function
+AOI221X2LVT#PWR
+  port Y : no power_down_function
+AOI221X4LVT#PWR
+  port Y : no power_down_function
+AOI221XLLVT#PWR
+  port Y : no power_down_function
+AOI222X1LVT#PWR
+  port Y : no power_down_function
+AOI222X2LVT#PWR
+  port Y : no power_down_function
+AOI222X4LVT#PWR
+  port Y : no power_down_function
+AOI222XLLVT#PWR
+  port Y : no power_down_function
+AOI22X1LVT#PWR
+  port Y : no power_down_function
+AOI22X2LVT#PWR
+  port Y : no power_down_function
+AOI22X4LVT#PWR
+  port Y : no power_down_function
+AOI22XLLVT#PWR
+  port Y : no power_down_function
+AOI2BB1X1LVT#PWR
+  port Y : no power_down_function
+AOI2BB1X2LVT#PWR
+  port Y : no power_down_function
+AOI2BB1X4LVT#PWR
+  port Y : no power_down_function
+AOI2BB1XLLVT#PWR
+  port Y : no power_down_function
+AOI2BB2X1LVT#PWR
+  port Y : no power_down_function
+AOI2BB2X2LVT#PWR
+  port Y : no power_down_function
+AOI2BB2X4LVT#PWR
+  port Y : no power_down_function
+AOI2BB2XLLVT#PWR
+  port Y : no power_down_function
+AOI31X1LVT#PWR
+  port Y : no power_down_function
+AOI31X2LVT#PWR
+  port Y : no power_down_function
+AOI31X4LVT#PWR
+  port Y : no power_down_function
+AOI31XLLVT#PWR
+  port Y : no power_down_function
+AOI32X1LVT#PWR
+  port Y : no power_down_function
+AOI32X2LVT#PWR
+  port Y : no power_down_function
+AOI32X4LVT#PWR
+  port Y : no power_down_function
+AOI32XLLVT#PWR
+  port Y : no power_down_function
+AOI33X1LVT#PWR
+  port Y : no power_down_function
+AOI33X2LVT#PWR
+  port Y : no power_down_function
+AOI33X4LVT#PWR
+  port Y : no power_down_function
+AOI33XLLVT#PWR
+  port Y : no power_down_function
+BMXIX2LVT#PWR
+  port PPN : no power_down_function
+BMXIX4LVT#PWR
+  port PPN : no power_down_function
+BUFX12LVT#PWR
+  port Y : no power_down_function
+BUFX16LVT#PWR
+  port Y : no power_down_function
+BUFX2LVT#PWR
+  port Y : no power_down_function
+BUFX20LVT#PWR
+  port Y : no power_down_function
+BUFX3LVT#PWR
+  port Y : no power_down_function
+BUFX4LVT#PWR
+  port Y : no power_down_function
+BUFX6LVT#PWR
+  port Y : no power_down_function
+BUFX8LVT#PWR
+  port Y : no power_down_function
+CLKAND2X12LVT#PWR
+  port Y : no power_down_function
+CLKAND2X2LVT#PWR
+  port Y : no power_down_function
+CLKAND2X3LVT#PWR
+  port Y : no power_down_function
+CLKAND2X4LVT#PWR
+  port Y : no power_down_function
+CLKAND2X6LVT#PWR
+  port Y : no power_down_function
+CLKAND2X8LVT#PWR
+  port Y : no power_down_function
+CLKBUFX12LVT#PWR
+  port Y : no power_down_function
+CLKBUFX16LVT#PWR
+  port Y : no power_down_function
+CLKBUFX2LVT#PWR
+  port Y : no power_down_function
+CLKBUFX20LVT#PWR
+  port Y : no power_down_function
+CLKBUFX3LVT#PWR
+  port Y : no power_down_function
+CLKBUFX4LVT#PWR
+  port Y : no power_down_function
+CLKBUFX6LVT#PWR
+  port Y : no power_down_function
+CLKBUFX8LVT#PWR
+  port Y : no power_down_function
+CLKINVX1LVT#PWR
+  port Y : no power_down_function
+CLKINVX12LVT#PWR
+  port Y : no power_down_function
+CLKINVX16LVT#PWR
+  port Y : no power_down_function
+CLKINVX2LVT#PWR
+  port Y : no power_down_function
+CLKINVX20LVT#PWR
+  port Y : no power_down_function
+CLKINVX3LVT#PWR
+  port Y : no power_down_function
+CLKINVX4LVT#PWR
+  port Y : no power_down_function
+CLKINVX6LVT#PWR
+  port Y : no power_down_function
+CLKINVX8LVT#PWR
+  port Y : no power_down_function
+CLKMX2X12LVT#PWR
+  port Y : no power_down_function
+CLKMX2X2LVT#PWR
+  port Y : no power_down_function
+CLKMX2X3LVT#PWR
+  port Y : no power_down_function
+CLKMX2X4LVT#PWR
+  port Y : no power_down_function
+CLKMX2X6LVT#PWR
+  port Y : no power_down_function
+CLKMX2X8LVT#PWR
+  port Y : no power_down_function
+CLKXOR2X1LVT#PWR
+  port Y : no power_down_function
+CLKXOR2X2LVT#PWR
+  port Y : no power_down_function
+CLKXOR2X4LVT#PWR
+  port Y : no power_down_function
+CLKXOR2X8LVT#PWR
+  port Y : no power_down_function
+DFFHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFNSRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFNSRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFNSRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFNSRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFQXLLVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFSXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFTRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFTRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFTRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFTRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DFFXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+DLY1X1LVT#PWR
+  port Y : no power_down_function
+DLY1X4LVT#PWR
+  port Y : no power_down_function
+DLY2X1LVT#PWR
+  port Y : no power_down_function
+DLY2X4LVT#PWR
+  port Y : no power_down_function
+DLY3X1LVT#PWR
+  port Y : no power_down_function
+DLY3X4LVT#PWR
+  port Y : no power_down_function
+DLY4X1LVT#PWR
+  port Y : no power_down_function
+DLY4X4LVT#PWR
+  port Y : no power_down_function
+EDFFHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFTRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFTRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFTRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFTRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+EDFFXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+INVX1LVT#PWR
+  port Y : no power_down_function
+INVX12LVT#PWR
+  port Y : no power_down_function
+INVX16LVT#PWR
+  port Y : no power_down_function
+INVX2LVT#PWR
+  port Y : no power_down_function
+INVX20LVT#PWR
+  port Y : no power_down_function
+INVX3LVT#PWR
+  port Y : no power_down_function
+INVX4LVT#PWR
+  port Y : no power_down_function
+INVX6LVT#PWR
+  port Y : no power_down_function
+INVX8LVT#PWR
+  port Y : no power_down_function
+INVXLLVT#PWR
+  port Y : no power_down_function
+MDFFHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+MDFFHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+MDFFHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+MDFFHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+MX2X1LVT#PWR
+  port Y : no power_down_function
+MX2X2LVT#PWR
+  port Y : no power_down_function
+MX2X4LVT#PWR
+  port Y : no power_down_function
+MX2X6LVT#PWR
+  port Y : no power_down_function
+MX2X8LVT#PWR
+  port Y : no power_down_function
+MX2XLLVT#PWR
+  port Y : no power_down_function
+MX3X1LVT#PWR
+  port Y : no power_down_function
+MX3X2LVT#PWR
+  port Y : no power_down_function
+MX3X4LVT#PWR
+  port Y : no power_down_function
+MX3XLLVT#PWR
+  port Y : no power_down_function
+MX4X1LVT#PWR
+  port Y : no power_down_function
+MX4X2LVT#PWR
+  port Y : no power_down_function
+MX4X4LVT#PWR
+  port Y : no power_down_function
+MX4XLLVT#PWR
+  port Y : no power_down_function
+MXI2X1LVT#PWR
+  port Y : no power_down_function
+MXI2X2LVT#PWR
+  port Y : no power_down_function
+MXI2X4LVT#PWR
+  port Y : no power_down_function
+MXI2X6LVT#PWR
+  port Y : no power_down_function
+MXI2X8LVT#PWR
+  port Y : no power_down_function
+MXI2XLLVT#PWR
+  port Y : no power_down_function
+MXI3X1LVT#PWR
+  port Y : no power_down_function
+MXI3X2LVT#PWR
+  port Y : no power_down_function
+MXI3X4LVT#PWR
+  port Y : no power_down_function
+MXI3XLLVT#PWR
+  port Y : no power_down_function
+MXI4X1LVT#PWR
+  port Y : no power_down_function
+MXI4X2LVT#PWR
+  port Y : no power_down_function
+MXI4X4LVT#PWR
+  port Y : no power_down_function
+MXI4XLLVT#PWR
+  port Y : no power_down_function
+NAND2BX1LVT#PWR
+  port Y : no power_down_function
+NAND2BX2LVT#PWR
+  port Y : no power_down_function
+NAND2BX4LVT#PWR
+  port Y : no power_down_function
+NAND2BXLLVT#PWR
+  port Y : no power_down_function
+NAND2X1LVT#PWR
+  port Y : no power_down_function
+NAND2X2LVT#PWR
+  port Y : no power_down_function
+NAND2X4LVT#PWR
+  port Y : no power_down_function
+NAND2X6LVT#PWR
+  port Y : no power_down_function
+NAND2X8LVT#PWR
+  port Y : no power_down_function
+NAND2XLLVT#PWR
+  port Y : no power_down_function
+NAND3BX1LVT#PWR
+  port Y : no power_down_function
+NAND3BX2LVT#PWR
+  port Y : no power_down_function
+NAND3BX4LVT#PWR
+  port Y : no power_down_function
+NAND3BXLLVT#PWR
+  port Y : no power_down_function
+NAND3X1LVT#PWR
+  port Y : no power_down_function
+NAND3X2LVT#PWR
+  port Y : no power_down_function
+NAND3X4LVT#PWR
+  port Y : no power_down_function
+NAND3X6LVT#PWR
+  port Y : no power_down_function
+NAND3X8LVT#PWR
+  port Y : no power_down_function
+NAND3XLLVT#PWR
+  port Y : no power_down_function
+NAND4BBX1LVT#PWR
+  port Y : no power_down_function
+NAND4BBX2LVT#PWR
+  port Y : no power_down_function
+NAND4BBX4LVT#PWR
+  port Y : no power_down_function
+NAND4BBXLLVT#PWR
+  port Y : no power_down_function
+NAND4BX1LVT#PWR
+  port Y : no power_down_function
+NAND4BX2LVT#PWR
+  port Y : no power_down_function
+NAND4BX4LVT#PWR
+  port Y : no power_down_function
+NAND4BXLLVT#PWR
+  port Y : no power_down_function
+NAND4X1LVT#PWR
+  port Y : no power_down_function
+NAND4X2LVT#PWR
+  port Y : no power_down_function
+NAND4X4LVT#PWR
+  port Y : no power_down_function
+NAND4X6LVT#PWR
+  port Y : no power_down_function
+NAND4X8LVT#PWR
+  port Y : no power_down_function
+NAND4XLLVT#PWR
+  port Y : no power_down_function
+NOR2BX1LVT#PWR
+  port Y : no power_down_function
+NOR2BX2LVT#PWR
+  port Y : no power_down_function
+NOR2BX4LVT#PWR
+  port Y : no power_down_function
+NOR2BXLLVT#PWR
+  port Y : no power_down_function
+NOR2X1LVT#PWR
+  port Y : no power_down_function
+NOR2X2LVT#PWR
+  port Y : no power_down_function
+NOR2X4LVT#PWR
+  port Y : no power_down_function
+NOR2X6LVT#PWR
+  port Y : no power_down_function
+NOR2X8LVT#PWR
+  port Y : no power_down_function
+NOR2XLLVT#PWR
+  port Y : no power_down_function
+NOR3BX1LVT#PWR
+  port Y : no power_down_function
+NOR3BX2LVT#PWR
+  port Y : no power_down_function
+NOR3BX4LVT#PWR
+  port Y : no power_down_function
+NOR3BXLLVT#PWR
+  port Y : no power_down_function
+NOR3X1LVT#PWR
+  port Y : no power_down_function
+NOR3X2LVT#PWR
+  port Y : no power_down_function
+NOR3X4LVT#PWR
+  port Y : no power_down_function
+NOR3X6LVT#PWR
+  port Y : no power_down_function
+NOR3X8LVT#PWR
+  port Y : no power_down_function
+NOR3XLLVT#PWR
+  port Y : no power_down_function
+NOR4BBX1LVT#PWR
+  port Y : no power_down_function
+NOR4BBX2LVT#PWR
+  port Y : no power_down_function
+NOR4BBX4LVT#PWR
+  port Y : no power_down_function
+NOR4BBXLLVT#PWR
+  port Y : no power_down_function
+NOR4BX1LVT#PWR
+  port Y : no power_down_function
+NOR4BX2LVT#PWR
+  port Y : no power_down_function
+NOR4BX4LVT#PWR
+  port Y : no power_down_function
+NOR4BXLLVT#PWR
+  port Y : no power_down_function
+NOR4X1LVT#PWR
+  port Y : no power_down_function
+NOR4X2LVT#PWR
+  port Y : no power_down_function
+NOR4X4LVT#PWR
+  port Y : no power_down_function
+NOR4X6LVT#PWR
+  port Y : no power_down_function
+NOR4X8LVT#PWR
+  port Y : no power_down_function
+NOR4XLLVT#PWR
+  port Y : no power_down_function
+OA21X1LVT#PWR
+  port Y : no power_down_function
+OA21X2LVT#PWR
+  port Y : no power_down_function
+OA21X4LVT#PWR
+  port Y : no power_down_function
+OA21XLLVT#PWR
+  port Y : no power_down_function
+OA22X1LVT#PWR
+  port Y : no power_down_function
+OA22X2LVT#PWR
+  port Y : no power_down_function
+OA22X4LVT#PWR
+  port Y : no power_down_function
+OA22XLLVT#PWR
+  port Y : no power_down_function
+OAI211X1LVT#PWR
+  port Y : no power_down_function
+OAI211X2LVT#PWR
+  port Y : no power_down_function
+OAI211X4LVT#PWR
+  port Y : no power_down_function
+OAI211XLLVT#PWR
+  port Y : no power_down_function
+OAI21X1LVT#PWR
+  port Y : no power_down_function
+OAI21X2LVT#PWR
+  port Y : no power_down_function
+OAI21X4LVT#PWR
+  port Y : no power_down_function
+OAI21XLLVT#PWR
+  port Y : no power_down_function
+OAI221X1LVT#PWR
+  port Y : no power_down_function
+OAI221X2LVT#PWR
+  port Y : no power_down_function
+OAI221X4LVT#PWR
+  port Y : no power_down_function
+OAI221XLLVT#PWR
+  port Y : no power_down_function
+OAI222X1LVT#PWR
+  port Y : no power_down_function
+OAI222X2LVT#PWR
+  port Y : no power_down_function
+OAI222X4LVT#PWR
+  port Y : no power_down_function
+OAI222XLLVT#PWR
+  port Y : no power_down_function
+OAI22X1LVT#PWR
+  port Y : no power_down_function
+OAI22X2LVT#PWR
+  port Y : no power_down_function
+OAI22X4LVT#PWR
+  port Y : no power_down_function
+OAI22XLLVT#PWR
+  port Y : no power_down_function
+OAI2BB1X1LVT#PWR
+  port Y : no power_down_function
+OAI2BB1X2LVT#PWR
+  port Y : no power_down_function
+OAI2BB1X4LVT#PWR
+  port Y : no power_down_function
+OAI2BB1XLLVT#PWR
+  port Y : no power_down_function
+OAI2BB2X1LVT#PWR
+  port Y : no power_down_function
+OAI2BB2X2LVT#PWR
+  port Y : no power_down_function
+OAI2BB2X4LVT#PWR
+  port Y : no power_down_function
+OAI2BB2XLLVT#PWR
+  port Y : no power_down_function
+OAI31X1LVT#PWR
+  port Y : no power_down_function
+OAI31X2LVT#PWR
+  port Y : no power_down_function
+OAI31X4LVT#PWR
+  port Y : no power_down_function
+OAI31XLLVT#PWR
+  port Y : no power_down_function
+OAI32X1LVT#PWR
+  port Y : no power_down_function
+OAI32X2LVT#PWR
+  port Y : no power_down_function
+OAI32X4LVT#PWR
+  port Y : no power_down_function
+OAI32XLLVT#PWR
+  port Y : no power_down_function
+OAI33X1LVT#PWR
+  port Y : no power_down_function
+OAI33X2LVT#PWR
+  port Y : no power_down_function
+OAI33X4LVT#PWR
+  port Y : no power_down_function
+OAI33XLLVT#PWR
+  port Y : no power_down_function
+OR2X1LVT#PWR
+  port Y : no power_down_function
+OR2X2LVT#PWR
+  port Y : no power_down_function
+OR2X4LVT#PWR
+  port Y : no power_down_function
+OR2X6LVT#PWR
+  port Y : no power_down_function
+OR2X8LVT#PWR
+  port Y : no power_down_function
+OR2XLLVT#PWR
+  port Y : no power_down_function
+OR3X1LVT#PWR
+  port Y : no power_down_function
+OR3X2LVT#PWR
+  port Y : no power_down_function
+OR3X4LVT#PWR
+  port Y : no power_down_function
+OR3X6LVT#PWR
+  port Y : no power_down_function
+OR3X8LVT#PWR
+  port Y : no power_down_function
+OR3XLLVT#PWR
+  port Y : no power_down_function
+OR4X1LVT#PWR
+  port Y : no power_down_function
+OR4X2LVT#PWR
+  port Y : no power_down_function
+OR4X4LVT#PWR
+  port Y : no power_down_function
+OR4X6LVT#PWR
+  port Y : no power_down_function
+OR4X8LVT#PWR
+  port Y : no power_down_function
+OR4XLLVT#PWR
+  port Y : no power_down_function
+SDFFHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFNSRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFNSRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFNSRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFNSRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFQXLLVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFSXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFTRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFTRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFTRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFTRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SDFFXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFTRX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFTRX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFTRX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFTRXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SEDFFXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *dff.00* : no power_down_function
+SMDFFHQX1LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SMDFFHQX2LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SMDFFHQX4LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+SMDFFHQX8LVT#PWR
+  port Q : no power_down_function
+  cell *dff.00* : no power_down_function
+TBUFX1LVT#PWR
+  port Y : no power_down_function
+TBUFX12LVT#PWR
+  port Y : no power_down_function
+TBUFX16LVT#PWR
+  port Y : no power_down_function
+TBUFX2LVT#PWR
+  port Y : no power_down_function
+TBUFX20LVT#PWR
+  port Y : no power_down_function
+TBUFX3LVT#PWR
+  port Y : no power_down_function
+TBUFX4LVT#PWR
+  port Y : no power_down_function
+TBUFX6LVT#PWR
+  port Y : no power_down_function
+TBUFX8LVT#PWR
+  port Y : no power_down_function
+TBUFXLLVT#PWR
+  port Y : no power_down_function
+TIEHILVT#PWR
+  port Y : no power_down_function
+TIELOLVT#PWR
+  port Y : no power_down_function
+TLATNCAX12LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX16LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX2LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX20LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX3LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX4LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX6LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNCAX8LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX12LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX16LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX2LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX20LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX3LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX4LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX6LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNTSCAX8LVT#PWR
+  port ECK : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATNXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATX1LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATX2LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATX4LVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+TLATXLLVT#PWR
+  port Q : no power_down_function
+  port QN : no power_down_function
+  cell *lat.00* : no power_down_function
+XNOR2X1LVT#PWR
+  port Y : no power_down_function
+XNOR2X2LVT#PWR
+  port Y : no power_down_function
+XNOR2X4LVT#PWR
+  port Y : no power_down_function
+XNOR2XLLVT#PWR
+  port Y : no power_down_function
+XNOR3X1LVT#PWR
+  port Y : no power_down_function
+XNOR3XLLVT#PWR
+  port Y : no power_down_function
+XOR2X1LVT#PWR
+  port Y : no power_down_function
+XOR2X2LVT#PWR
+  port Y : no power_down_function
+XOR2X4LVT#PWR
+  port Y : no power_down_function
+XOR2XLLVT#PWR
+  port Y : no power_down_function
+XOR3X1LVT#PWR
+  port Y : no power_down_function
+XOR3XLLVT#PWR
+  port Y : no power_down_function

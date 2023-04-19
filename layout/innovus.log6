@@ -1,0 +1,13 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v18.10-p002_1, built Tue May 29 19:19:55 PDT 2018
+Options:	layout_script.tcl 
+Date:		Mon May 30 21:14:35 2022
+Host:		vspace.ecdl.hut.fi (x86_64 w/Linux 3.10.0-1160.59.1.el7.x86_64) (1core*8cpus*Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz 25600KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+**ERROR: (IMPLIC-68):	Unknown argument: layout_script.tcl.
+	Run "innovus -help" for valid option/argument.

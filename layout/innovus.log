@@ -1,0 +1,482 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v18.10-p002_1, built Tue May 29 19:19:55 PDT 2018
+Options:	
+Date:		Tue May 24 23:06:32 2022
+Host:		vspace.ecdl.hut.fi (x86_64 w/Linux 3.10.0-1160.59.1.el7.x86_64) (1core*8cpus*Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz 25600KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	18.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+<CMD> set init_design_settop 0
+<CMD> set init_verilog ../netlist/serial_peripheral_interface.v
+<CMD> set init_mmmc_file Default.view
+<CMD> init_design
+#% Begin Load MMMC data ... (date=05/24 23:07:36, mem=439.8M)
+#% End Load MMMC data ... (date=05/24 23:07:36, total cpu=0:00:00.0, real=0:00:00.0, peak res=439.9M, current mem=439.9M)
+rc_basic
+
+Loading LEF file ../techlibs/gsclib045_tech.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+
+Loading LEF file ../techlibs/gsclib045_macro.lef ...
+Set DBUPerIGU to M2 pitch 400.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNALVT' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+viaInitial starts at Tue May 24 23:07:37 2022
+viaInitial ends at Tue May 24 23:07:37 2022
+Loading view definition file from Default.view
+Reading slow_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+Read 480 cells in library 'slow_vdd1v0' 
+Reading fast_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v0_basicCells_lvt.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v0_basicCells_lvt.lib)
+Read 480 cells in library 'fast_vdd1v0' 
+*** End library_loading (cpu=0.03min, real=0.02min, mem=13.1M, fe_cpu=0.44min, fe_real=1.10min, fe_mem=606.5M) ***
+#% Begin Load netlist data ... (date=05/24 23:07:38, mem=457.9M)
+*** Begin netlist parsing (mem=606.5M) ***
+Created 480 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../netlist/serial_peripheral_interface.v'
+
+*** Memory Usage v#1 (Current mem = 612.527M, initial mem = 251.488M) ***
+*** End netlist parsing (cpu=0:00:00.1, real=0:00:00.0, mem=612.5M) ***
+#% End Load netlist data ... (date=05/24 23:07:38, total cpu=0:00:00.2, real=0:00:00.0, peak res=473.2M, current mem=473.2M)
+Top level cell is microcontroller_interface_8_8.
+Hooked 960 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell microcontroller_interface_8_8 ...
+*** Netlist is unique.
+** info: there are 968 modules.
+** info: there are 14077 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 654.449M, initial mem = 251.488M) ***
+**WARN: (IMPFP-3961):	The techSite 'CoreSiteDouble' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../techlibs/qrcTechFile
+Generating auto layer map file.
+Completed (cpu: 0:00:07.3 real: 0:00:08.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: setup_view
+    RC-Corner Name        : rc_basic
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../techlibs/qrcTechFile'
+ 
+ Analysis View: hold_view
+    RC-Corner Name        : rc_basic
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../techlibs/qrcTechFile'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../timing/prelayout.sdc' ...
+Current (total cpu=0:00:34.9, real=0:01:15, peak res=677.5M, current mem=677.5M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../timing/prelayout.sdc, Line 8).
+
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../timing/prelayout.sdc, Line 9).
+
+INFO (CTE): Reading of timing constraints file ../timing/prelayout.sdc completed, with 2 WARNING
+WARNING (CTE-25): Line: 10 of File ../timing/prelayout.sdc : Skipped unsupported command: set_max_area
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=693.6M, current mem=693.6M)
+Current (total cpu=0:00:35.0, real=0:01:15, peak res=693.6M, current mem=693.6M)
+Total number of combinational cells: 318
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2LVT BUFX12LVT BUFX16LVT BUFX20LVT CLKBUFX2LVT BUFX3LVT BUFX4LVT BUFX6LVT BUFX8LVT CLKBUFX12LVT CLKBUFX16LVT CLKBUFX20LVT CLKBUFX3LVT CLKBUFX4LVT CLKBUFX6LVT CLKBUFX8LVT
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1LVT CLKINVX2LVT CLKINVX12LVT CLKINVX16LVT CLKINVX20LVT CLKINVX4LVT CLKINVX3LVT CLKINVX6LVT CLKINVX8LVT INVX1LVT INVX2LVT INVX12LVT INVX16LVT INVX20LVT INVXLLVT INVX3LVT INVX4LVT INVX6LVT INVX8LVT
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1LVT DLY1X4LVT DLY2X1LVT DLY2X4LVT DLY3X1LVT DLY3X4LVT DLY4X1LVT DLY4X4LVT
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            6  ViaRule only supports routing/cut layer,...
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           3  The techSite '%s' has no related standar...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+*** Message Summary: 34 warning(s), 0 error(s)
+
+<CMD> getIoFlowFlag
+<CMD> setIoFlowFlag 0
+<CMD> floorPlan -site CoreSite -r 0.992807867312 0.699991 15 15 15 15
+<CMD> uiSetTool select
+<CMD> getIoFlowFlag
+<CMD> fit
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [8] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [8] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 1 -spreadType center -spacing 10 -pin {clk instr_wr rst}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [3] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.06 -pinDepth 0.335 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 10.0 -pin {clk instr_wr rst}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [3] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.08 -pinDepth 0.335 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 10.0 -pin {clk instr_wr rst}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [3] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [8] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 10.0 -pin {clk instr_wr rst}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [3] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Bottom -layer 4 -spreadType center -spacing 0.2 -pin {{statusOutSPI[0]} {statusOutSPI[1]} {statusOutSPI[2]} {opcode_status[0]} {opcode_status[1]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [5] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Right -layer 3 -spreadType center -spacing 10 -pin {{instruction_in[0]} {instruction_in[1]} {instruction_in[2]} {instruction_in[3]} {instruction_in[4]} {instruction_in[5]} {instruction_in[6]} {instruction_in[7]} {instruction_in[8]} {instruction_in[9]} {instruction_in[10]} {instruction_in[11]} {instruction_in[12]} {instruction_in[13]} {resultOutMemSPI[0]} {resultOutMemSPI[1]} {resultOutMemSPI[2]} {resultOutMemSPI[3]} {resultOutMemSPI[4]} {resultOutMemSPI[5]} {resultOutMemSPI[6]} {resultOutMemSPI[7]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [22] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {{PC_tot[0]} {PC_tot[1]} {PC_tot[2]} {PC_tot[3]} {PC_tot[4]} {PC_tot[5]} {PC_tot[6]} {PC_tot[7]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [8] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> getPinAssignMode -pinEditInBatch -quiet
+<CMD> setPinAssignMode -pinEditInBatch true
+<CMD> editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+Fixing pin overlap option is turned OFF. Automatic tool checks for overlap only for snap to TRACK.
+Successfully spread [8] pins.
+editPin : finished (cpu = 0:00:00.0 real = 0:00:00.0, mem = 920.7M).
+<CMD> setPinAssignMode -pinEditInBatch false
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {vdd! vss!} -type core_rings -follow core -layer {top Metal9 bottom Metal9 left Metal8 right Metal8} -width {top 4.5 bottom 4.5 left 4.5 right 4.5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+**ERROR: (IMPPP-190):	The net 'vdd!' does not exist in design.
+**ERROR: Error: Invalid net names specified. 
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> set sprCreateIeRingOffset 1.0
+<CMD> set sprCreateIeRingThreshold 1.0
+<CMD> set sprCreateIeRingJogDistance 1.0
+<CMD> set sprCreateIeRingLayers {}
+<CMD> set sprCreateIeStripeWidth 10.0
+<CMD> set sprCreateIeStripeThreshold 1.0
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd! vss!} -layer Metal8 -direction vertical -width 4.5 -spacing 2 -number_of_sets 3 -start_from left -start_offset 0 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+**ERROR: (IMPPP-190):	The net 'vdd!' does not exist in design.
+**ERROR: Error: Invalid net names specified. 
+<CMD> clearGlobalNets
+net ignore based on current view = 0
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> setSrouteMode -viaConnectToShape { noshape }
+<CMD> sroute -connect { corePin } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { vdd! vss! } -allowLayerChange 1 -targetViaLayerRange { Metal1(1) Metal11(11) }
+**WARN: (IMPSR-4058):	Sroute option: blockPinTarget should be used in conjunction with option: -connect blockPin. 
+*** Begin SPECIAL ROUTE on Tue May 24 23:23:03 2022 ***
+SPECIAL ROUTE ran on directory: /home/xzhong/E3540/layout
+SPECIAL ROUTE ran on machine: vspace.ecdl.hut.fi (Linux 3.10.0-1160.59.1.el7.x86_64 Xeon 2.40Ghz)
+
+Begin option processing ...
+srouteConnectPowerBump set to false
+routeSelectNet set to "vdd! vss!"
+routeSpecial set to true
+srouteBottomLayerLimit set to 1
+srouteBottomTargetLayerLimit set to 1
+srouteConnectBlockPin set to false
+srouteConnectConverterPin set to false
+srouteConnectPadPin set to false
+srouteConnectStripe set to false
+srouteCrossoverViaBottomLayer set to 1
+srouteCrossoverViaTopLayer set to 11
+srouteFollowCorePinEnd set to 3
+srouteFollowPadPin set to false
+srouteJogControl set to "preferWithChanges differentLayer"
+srouteNoViaOnWireShape set to "padring ring stripe blockring blockpin coverpin blockwire corewire followpin iowire"
+sroutePadPinAllPorts set to true
+sroutePreserveExistingRoutes set to true
+srouteRoutePowerBarPortOnBothDir set to true
+srouteStopBlockPin set to "nearestTarget"
+srouteTopLayerLimit set to 11
+srouteTopTargetLayerLimit set to 11
+End option processing: cpu: 0:00:00, real: 0:00:00, peak: 1735.00 megs.
+
+Reading DB technology information...
+Finished reading DB technology information.
+Reading floorplan and netlist information...
+Finished reading floorplan and netlist information.
+**WARN: (IMPSR-4302):	Cap-table/qrcTechFile is found in the design, so the same information from the technology file will be ignored.
+   **WARN: design has no power net
+   **WARN: design has no ground net
+   A total of 2 warnings.
+Read in 24 layers, 11 routing layers, 1 overlap layer
+Read in 2 nondefault rules, 0 used
+Read in 487 macros, 59 used
+Read in 59 components
+  59 core components: 59 unplaced, 0 placed, 0 fixed
+Read in 46 physical pins
+  46 physical pins: 0 unplaced, 0 placed, 46 fixed
+Read in 46 nets
+Read in 46 terminals
+**WARN: (IMPSR-4500):	Net name vdd! in selected net list is illegal so will be ignored
+**WARN: (IMPSR-4500):	Net name vss! in selected net list is illegal so will be ignored
+Can not find net vdd! vss! in design.
+**ERROR: (IMPSR-663):	No net has been selected. Indicate which net to route by -nets option. All nets by default.
+<CMD> fit
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd! vss!} -layer Metal8 -direction vertical -width 4.5 -spacing 2 -number_of_sets 3 -start_from left -start_offset 0 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+**ERROR: (IMPPP-190):	The net 'vdd!' does not exist in design.
+**ERROR: Error: Invalid net names specified. 
+<CMD> setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe will allow jog to connect padcore ring and block ring.
+
+Stripes will stop at the boundary of the specified area.
+When breaking rings, the power planner will consider the existence of blocks.
+Stripes will not extend to closest target.
+The power planner will set stripe antenna targets to none (no trimming allowed).
+Stripes will not be created over regions without power planning wires.
+The entire stripe set will break at the domain if one of the nets is not in the domain.
+addStripe will break automatically at non-default domains when generating global stripes over the core area or default domain.
+Offset for stripe breaking is set to 0.
+<CMD> addStripe -nets {vdd! vss!} -layer Metal8 -direction vertical -width 4.5 -spacing 2 -number_of_sets 3 -start_from left -start_offset 0 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+
+**ERROR: (IMPPP-190):	The net 'vdd!' does not exist in design.
+**ERROR: Error: Invalid net names specified. 
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> clearGlobalNets
+<CMD> globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vdd!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+**ERROR: (IMPDB-1216):	The global net 'vss!' specified in the global net connection(GNC) rule doesn't exist in the design.
+<CMD> setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+The ring targets are set to core/block ring wires.
+addRing command will consider rows while creating rings.
+addRing command will disallow rings to go over rows.
+addRing command will ignore shorts while creating rings.
+<CMD> addRing -nets {vdd! vss!} -type core_rings -follow core -layer {top Metal9 bottom Metal9 left Metal8 right Metal8} -width {top 4.5 bottom 4.5 left 4.5 right 4.5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+
+**ERROR: (IMPPP-190):	The net 'vdd!' does not exist in design.
+**ERROR: Error: Invalid net names specified. 
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Tue May 24 23:28:14 2022
+  Total CPU time:     0:02:59
+  Total real time:    0:21:49
+  Peak memory (main): 772.39MB
+
+
+*** Memory Usage v#1 (Current mem = 929.004M, initial mem = 251.488M) ***
+*** Message Summary: 38 warning(s), 22 error(s)
+
+--- Ending "Innovus" (totcpu=0:03:00, real=0:21:42, mem=929.0M) ---

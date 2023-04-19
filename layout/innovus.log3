@@ -1,0 +1,314 @@
+
+Cadence Innovus(TM) Implementation System.
+Copyright 2018 Cadence Design Systems, Inc. All rights reserved worldwide.
+
+Version:	v18.10-p002_1, built Tue May 29 19:19:55 PDT 2018
+Options:	
+Date:		Wed May 25 12:20:57 2022
+Host:		vspace.ecdl.hut.fi (x86_64 w/Linux 3.10.0-1160.59.1.el7.x86_64) (1core*8cpus*Intel(R) Xeon(R) CPU E5-2640 v4 @ 2.40GHz 25600KB)
+OS:		CentOS Linux release 7.9.2009 (Core)
+
+License:
+		invs	Innovus Implementation System	18.1	checkout succeeded
+		8 CPU jobs allowed with the current license(s). Use setMultiCpuUsage to set your required CPU count.
+Change the soft stacksize limit to 0.2%RAM (128 mbytes). Set global soft_stack_size_limit to change the value.
+
+**INFO:  MMMC transition support version v31-84 
+
+<CMD> set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+<CMD> suppressMessage ENCEXT-2799
+<CMD> win
+<CMD> set init_gnd_net vss!
+<CMD> set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+<CMD> set init_design_settop 0
+<CMD> set init_verilog ../netlist/serial_peripheral_interface_layout.v
+<CMD> set init_mmmc_file Default.view
+<CMD> set init_pwr_net vdd!
+<CMD> init_design
+#% Begin Load MMMC data ... (date=05/25 12:22:37, mem=437.8M)
+#% End Load MMMC data ... (date=05/25 12:22:37, total cpu=0:00:00.0, real=0:00:00.0, peak res=437.9M, current mem=437.9M)
+rc_basic
+
+Loading LEF file ../techlibs/gsclib045_tech.lef ...
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PO', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_DIFF', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PSUB', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_PIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NIMP', 
+**WARN: (IMPLF-155):	ViaRule only supports routing/cut layer, but poly layer found for viaRule 'M1_NWELL', 
+
+Loading LEF file ../techlibs/gsclib045_macro.lef ...
+Set DBUPerIGU to M2 pitch 400.
+**WARN: (IMPLF-200):	Pin 'A' in macro 'ANTENNALVT' has no ANTENNAGATEAREA value defined. The library data is incomplete and some process antenna rules will not be checked correctly.
+Type 'man IMPLF-200' for more detail.
+
+viaInitial starts at Wed May 25 12:22:37 2022
+viaInitial ends at Wed May 25 12:22:37 2022
+Loading view definition file from Default.view
+Reading slow_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib' ...
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CON' of cell 'ACHCONX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFHXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFHXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFX4LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDFXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDFXLLVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'S' of cell 'ADDHX1LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+**WARN: (TECHLIB-436):	Attribute 'max_fanout' on 'output/inout' pin 'CO' of cell 'ADDHX2LVT' is not defined in the library. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+Message <TECHLIB-436> has exceeded the message display limit of '20'. Use 'set_message -no_limit -id list_of_msgIDs' to reset the message limit.
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/slow_vdd1v0_basicCells_lvt.lib)
+Read 480 cells in library 'slow_vdd1v0' 
+Reading fast_libs timing library '/prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v0_basicCells_lvt.lib' ...
+**WARN: (TECHLIB-302):	No function defined for cell 'ANTENNALVT'. The cell will only be used for analysis. (File /prog/cadence/gpdk/g045/lan/flow/t1u1/reference_libs/GPDK045/gsclib045_all_v4.4/gsclib045_lvt/timing/fast_vdd1v0_basicCells_lvt.lib)
+Read 480 cells in library 'fast_vdd1v0' 
+*** End library_loading (cpu=0.03min, real=0.03min, mem=14.0M, fe_cpu=0.46min, fe_real=1.70min, fe_mem=609.3M) ***
+#% Begin Load netlist data ... (date=05/25 12:22:39, mem=459.7M)
+*** Begin netlist parsing (mem=609.3M) ***
+Created 480 new cells from 2 timing libraries.
+Reading netlist ...
+Backslashed names will retain backslash and a trailing blank character.
+Reading verilog netlist '../netlist/serial_peripheral_interface_layout.v'
+
+*** Memory Usage v#1 (Current mem = 616.316M, initial mem = 251.492M) ***
+*** End netlist parsing (cpu=0:00:00.2, real=0:00:00.0, mem=616.3M) ***
+#% End Load netlist data ... (date=05/25 12:22:39, total cpu=0:00:00.2, real=0:00:00.0, peak res=477.5M, current mem=477.5M)
+Top level cell is microcontroller_interface_8_8.
+Hooked 960 DB cells to tlib cells.
+Starting recursive module instantiation check.
+No recursion found.
+Building hierarchical netlist for Cell microcontroller_interface_8_8 ...
+*** Netlist is unique.
+** info: there are 968 modules.
+** info: there are 20505 stdCell insts.
+
+*** Memory Usage v#1 (Current mem = 660.238M, initial mem = 251.492M) ***
+**WARN: (IMPFP-3961):	The techSite 'CoreSiteDouble' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'CornerSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+**WARN: (IMPFP-3961):	The techSite 'IOSite' has no related standard cells in LEF/OA library. Cannot make calculations for this site type unless standard cell models of this type exist in the LEF/OA library. If the SITE is not used by the library you can ignore this warning or remove the SITE definition from the LEF/OA to avoid this message.
+Type 'man IMPFP-3961' for more detail.
+Set Default Net Delay as 1000 ps.
+Set Default Net Load as 0.5 pF. 
+Set Default Input Pin Transition as 0.1 ps.
+Extraction setup Started 
+Initializing multi-corner RC extraction with 1 active RC Corners ...
+Captable file(s) not specified in multi-corner setup. PreRoute extraction will use technology file. For postRoute extraction, default value for effort level would be 'medium' and effort level 'low' would not be allowed.
+Generating auto layer map file.
+Importing multi-corner technology file(s) for preRoute extraction...
+../techlibs/qrcTechFile
+Generating auto layer map file.
+Completed (cpu: 0:00:05.7 real: 0:00:06.0)
+Set Shrink Factor to 1.00000
+Summary of Active RC-Corners : 
+ 
+ Analysis View: setup_view
+    RC-Corner Name        : rc_basic
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../techlibs/qrcTechFile'
+ 
+ Analysis View: hold_view
+    RC-Corner Name        : rc_basic
+    RC-Corner Index       : 0
+    RC-Corner Temperature : 25 Celsius
+    RC-Corner Cap Table   : ''
+    RC-Corner PreRoute Res Factor         : 1
+    RC-Corner PreRoute Cap Factor         : 1
+    RC-Corner PostRoute Res Factor        : 1 {1 1 1}
+    RC-Corner PostRoute Cap Factor        : 1 {1 1 1}
+    RC-Corner PostRoute XCap Factor       : 1 {1 1 1}
+    RC-Corner PreRoute Clock Res Factor   : 1	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner PreRoute Clock Cap Factor   : 1	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Cap Factor  : 1 {1 1 1} 	[Derived from postRoute_cap (effortLevel low)]
+    RC-Corner PostRoute Clock Res Factor  : 1 {1 1 1} 	[Derived from postRoute_res (effortLevel low)]
+    RC-Corner Technology file: '../techlibs/qrcTechFile'
+Updating RC grid for preRoute extraction ...
+Initializing multi-corner resistance tables ...
+Default value for postRoute extraction mode's effortLevel (-effortLevel option of setExtractRCMode) changed to 'medium'.
+*Info: initialize multi-corner CTS.
+Reading timing constraints file '../timing/prelayout.sdc' ...
+Current (total cpu=0:00:34.6, real=0:01:49, peak res=685.4M, current mem=685.4M)
+**WARN: (TCLCMD-1461):	Skipped unsupported command: set_units (File ../timing/prelayout.sdc, Line 8).
+
+**WARN: (TCLCMD-1014):	The SDC set_operating_conditions assertion is not supported. Please use the create_delay_corner command to specify the desired operating enviroment. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File ../timing/prelayout.sdc, Line 9).
+
+INFO (CTE): Reading of timing constraints file ../timing/prelayout.sdc completed, with 2 WARNING
+WARNING (CTE-25): Line: 10 of File ../timing/prelayout.sdc : Skipped unsupported command: set_max_area
+
+
+Ending "Constraint file reading stats" (total cpu=0:00:00.1, real=0:00:00.0, peak res=701.5M, current mem=701.5M)
+Current (total cpu=0:00:34.7, real=0:01:49, peak res=701.5M, current mem=701.5M)
+Total number of combinational cells: 318
+Total number of sequential cells: 152
+Total number of tristate cells: 10
+Total number of level shifter cells: 0
+Total number of power gating cells: 0
+Total number of isolation cells: 0
+Total number of power switch cells: 0
+Total number of pulse generator cells: 0
+Total number of always on buffers: 0
+Total number of retention cells: 0
+List of usable buffers: BUFX2LVT BUFX12LVT BUFX16LVT BUFX20LVT CLKBUFX2LVT BUFX3LVT BUFX4LVT BUFX6LVT BUFX8LVT CLKBUFX12LVT CLKBUFX16LVT CLKBUFX20LVT CLKBUFX3LVT CLKBUFX4LVT CLKBUFX6LVT CLKBUFX8LVT
+Total number of usable buffers: 16
+List of unusable buffers:
+Total number of unusable buffers: 0
+List of usable inverters: CLKINVX1LVT CLKINVX2LVT CLKINVX12LVT CLKINVX16LVT CLKINVX20LVT CLKINVX4LVT CLKINVX3LVT CLKINVX6LVT CLKINVX8LVT INVX1LVT INVX2LVT INVX12LVT INVX16LVT INVX20LVT INVXLLVT INVX3LVT INVX4LVT INVX6LVT INVX8LVT
+Total number of usable inverters: 19
+List of unusable inverters:
+Total number of unusable inverters: 0
+List of identified usable delay cells: DLY1X1LVT DLY1X4LVT DLY2X1LVT DLY2X4LVT DLY3X1LVT DLY3X4LVT DLY4X1LVT DLY4X4LVT
+Total number of identified usable delay cells: 8
+List of identified unusable delay cells:
+Total number of identified unusable delay cells: 0
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPLF-155            6  ViaRule only supports routing/cut layer,...
+WARNING   IMPLF-200            1  Pin '%s' in macro '%s' has no ANTENNAGAT...
+WARNING   IMPFP-3961           3  The techSite '%s' has no related standar...
+WARNING   TCLCMD-1014          1  The SDC set_operating_conditions asserti...
+WARNING   TCLCMD-1461          1  Skipped unsupported command: %s          
+WARNING   TECHLIB-302          2  No function defined for cell '%s'. The c...
+WARNING   TECHLIB-436         20  Attribute '%s' on '%s' pin '%s' of cell ...
+*** Message Summary: 34 warning(s), 0 error(s)
+
+<CMD> init_design
+**WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+<CMD> set init_design_settop 0
+<CMD> init_design
+**WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+<CMD> fit
+<CMD> set ::DelayCal::PersistentAaeDataExist 1
+<CMD> set ::TimeLib::tsgMarkCellLatchConstructFlag 1
+<CMD> set _timing_enable_backward_compatible_parallel_arcs 0
+<CMD> set conf_ioOri R0
+<CMD> set conf_row_height 1.71
+<CMD> set dbRestoreDbTool Innovus
+<CMD> set dbRestoreDbVersion 18.10-p002_1
+<CMD> set dbgSavedDesignHasNewPreserves 1
+<CMD> set dbgSupportPGTermUdm 1
+<CMD> set dcgHonorSignalNetNDR 1
+<CMD> set defHierChar /
+Set Default Input Pin Transition as 0.1 ps.
+<CMD> set delaycal_input_transition_delay 0.1ps
+<CMD> set distributed_client_message_echo 1
+<CMD> set distributed_mmmc_disable_reports_auto_redirection 0
+<CMD> set enc_enable_print_mode_command_reset_options 1
+<CMD> set floorplan_default_site CoreSite
+<CMD> set fpIsMaxIoHeight 0
+<CMD> set fp_core_height 304.38
+<CMD> set fp_core_to_bottom 15.01
+<CMD> set fp_core_to_left 15
+<CMD> set fp_core_to_right 15
+<CMD> set fp_core_to_top 15.01
+<CMD> set fp_core_width 306.6
+<CMD> set gpsPrivate::oigCGFixOutOfCoreChannels 1
+<CMD> set gpsPrivate::oigPBAwareTopoMode 23
+<CMD> set gpsPrivate::oigTopoBCMode 0
+<CMD> set gpsPrivate::oigTopoUseBABInTopLvlNodesInOCP 1
+<CMD> set gpsPrivate::oigUseNewMaxBufDistAPI 1
+<CMD> set ilmFlattenSetting 1
+<CMD> set init_design_settop 0
+<CMD> set init_gnd_net vss!
+<CMD> set init_lef_file {/home/xzhong/E3540/layout/microcontroller_interface_8_8_design.dat/libs/lef/gsclib045_tech.lef /home/xzhong/E3540/layout/microcontroller_interface_8_8_design.dat/libs/lef/gsclib045_macro.lef}
+<CMD> set init_mmmc_file /home/xzhong/E3540/layout/microcontroller_interface_8_8_design.dat/viewDefinition.tcl
+<CMD> set init_oa_search_lib {}
+<CMD> set init_original_verilog_files ../netlist/serial_peripheral_interface.v
+<CMD> set init_pwr_net vdd!
+<CMD> set init_verilog /home/xzhong/E3540/layout/microcontroller_interface_8_8_design.dat/microcontroller_interface_8_8.v.bin
+<CMD> set latch_time_borrow_mode max_borrow
+<CMD> set pegDefaultResScaleFactor 1
+<CMD> set pegDetailResScaleFactor 1
+<CMD> set report_inactive_arcs_format {from to when arc_type sense reason}
+<CMD> set soft_stack_size_limit 128
+<CMD> set spgLimitedSearchRadius 1
+<CMD> set spgTweakSwapNumGroup 4
+<CMD> set timing_allow_useful_skew_latency_per_view 1
+<CMD> set timing_disable_library_data_to_data_checks 1
+<CMD> set timing_disable_user_data_to_data_checks 1
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+**WARN: (IMPUDM-33):	Global variable "timing_enable_default_delay_arc" is obsolete and will be removed in a future release. The obsolete variable still works in this release, but to avoid this warning and to ensure compatibility with future releases, remove the obsolete variable from your script.
+<CMD> suppressMessage -silent GLOBAL-100
+<CMD> unsuppressMessage -silent GLOBAL-100
+<CMD> set timing_enable_default_delay_arc 1
+<CMD> set timing_enable_latch_borrow_mode_for_si_snalysis 1
+<CMD> set timing_remove_clock_reconvergence_pessimism false
+<CMD> set timing_case_analysis_for_sequential_propagation false
+<CMD> set timing_disable_set_case_analysis false
+<CMD> set timing_disable_recovery_removal_checks false
+<CMD> set timing_use_latch_time_borrow true
+<CMD> set timing_disable_clock_gating_checks false
+<CMD> set timing_self_loop_paths_no_skew false
+<CMD> set_global _allow_line_number_display_for_error_warn_messages "true"
+<CMD> set_global _scale_capacitance_to_1ff "true"
+<CMD> set_global _scale_time_to_100fs "true"
+<CMD> set_global _scale_leakage_power_to_1pw "true"
+<CMD> set_global _timing_combine_tlf_non_unate_arcs "true"
+<CMD> set_global _timing_library_switch_on_undeclared_arcs_function "false"
+<CMD> set_global _map_2007_03_low_power_to_2004_06 "true"
+<CMD> set_global timing_library_refactor_arc_merge_split "true"
+<CMD> set_global timing_library_new_ecsm_capacitance_support "true"
+<CMD> set_global timing_library_new_ecsm_wf_support "true"
+<CMD> set init_verilog ../netlist/serial_peripheral_interface_layout.v
+<CMD> set init_mmmc_file Default.view
+<CMD> init_design
+**WARN: (IMPSYT-7329):	Cannot load design with init_design, after design is already in memory.  This command is skipped.
+
+*** Summary of all messages that are not suppressed in this session:
+Severity  ID               Count  Summary                                  
+WARNING   IMPSYT-7329          1  Cannot load design with init_design, aft...
+*** Message Summary: 1 warning(s), 0 error(s)
+
+<CMD> setLayerPreference areaIo -isVisible 0
+<CMD> setLayerPreference areaIo -isVisible 1
+
+--------------------------------------------------------------------------------
+Exiting Innovus on Wed May 25 12:33:19 2022
+  Total CPU time:     0:01:48
+  Total real time:    0:12:23
+  Peak memory (main): 753.48MB
+
+
+*** Memory Usage v#1 (Current mem = 942.254M, initial mem = 251.492M) ***
+*** Message Summary: 40 warning(s), 0 error(s)
+
+--- Ending "Innovus" (totcpu=0:01:48, real=0:12:22, mem=942.3M) ---

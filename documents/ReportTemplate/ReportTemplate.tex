@@ -1,0 +1,24 @@
+\documentclass[twoside,a4paper,english,12pt]{report}
+%Preamble moved top stylefile
+\usepackage{MNTLatexReport}
+
+\begin{document}
+% Setup cover page & TOC
+\input{./TexFiles/coverpage.tex}
+
+\input{./TexFiles/tableofcontents.tex}
+% Some included text. see contents of the file for examples
+\input{./TexFiles/Chapter1.tex}
+\input{./TexFiles/Chapter2.tex}
+% only here to create some sort of preliminary TOC
+
+
+\clearpage
+%Set the bibliography stylefile and bibliography file
+%Use JabRef for bibliography management
+\bibliographystyle{IEEEtran}
+\bibliography{IEEEfull,Bibliography}
+%%Print the Symbols and abbreviations
+\printnomenclature
+\end{document}
+

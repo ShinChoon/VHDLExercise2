@@ -1,0 +1,458 @@
+#######################################################
+#                                                     
+#  Innovus Command Logging File                     
+#  Created on Tue May 24 23:28:44 2022                
+#                                                     
+#######################################################
+
+#@(#)CDS: Innovus v18.10-p002_1 (64bit) 05/29/2018 19:19 (Linux 2.6.18-194.el5)
+#@(#)CDS: NanoRoute 18.10-p002_1 NR180522-1057/18_10-UB (database version 2.30, 418.7.1) {superthreading v1.46}
+#@(#)CDS: AAE 18.10-p004 (64bit) 05/29/2018 (Linux 2.6.18-194.el5)
+#@(#)CDS: CTE 18.10-p003_1 () May 15 2018 10:23:07 ( )
+#@(#)CDS: SYNTECH 18.10-a012_1 () Apr 19 2018 01:27:21 ( )
+#@(#)CDS: CPE v18.10-p005
+#@(#)CDS: IQRC/TQRC 18.1.1-s118 (64bit) Fri Mar 23 17:23:45 PDT 2018 (Linux 2.6.18-194.el5)
+
+set_global _enable_mmmc_by_default_flow      $CTE::mmmc_default
+suppressMessage ENCEXT-2799
+win
+set init_gnd_net vss!
+set init_lef_file {../techlibs/gsclib045_tech.lef ../techlibs/gsclib045_macro.lef}
+set init_design_settop 0
+set init_verilog ../netlist/serial_peripheral_interface.v
+set init_mmmc_file Default.view
+set init_pwr_net vdd!
+init_design
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 10 -pin {clk rst instr_wr}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 3 -spreadType center -spacing 0.2 -pin {{PC_tot[0]} {PC_tot[1]} {PC_tot[2]} {PC_tot[3]} {PC_tot[4]} {PC_tot[5]} {PC_tot[6]} {PC_tot[7]} {addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 4 -spreadType center -spacing 0.2 -pin {{opcode_status[0]} {opcode_status[1]} {statusOutSPI[0]} {statusOutSPI[1]} {statusOutSPI[2]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 10 -pin {{instruction_in[0]} {instruction_in[1]} {instruction_in[2]} {instruction_in[3]} {instruction_in[4]} {instruction_in[5]} {instruction_in[6]} {instruction_in[7]} {instruction_in[8]} {instruction_in[9]} {instruction_in[10]} {instruction_in[11]} {instruction_in[12]} {instruction_in[13]} {resultOutMemSPI[0]} {resultOutMemSPI[1]} {resultOutMemSPI[2]} {resultOutMemSPI[3]} {resultOutMemSPI[4]} {resultOutMemSPI[5]} {resultOutMemSPI[6]} {resultOutMemSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {{addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]} {PC_tot[0]} {PC_tot[1]} {PC_tot[2]} {PC_tot[3]} {PC_tot[4]} {PC_tot[5]} {PC_tot[6]} {PC_tot[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 0.2 -pin {{instruction_in[0]} {instruction_in[1]} {instruction_in[2]} {instruction_in[3]} {instruction_in[4]} {instruction_in[5]} {instruction_in[6]} {instruction_in[7]} {instruction_in[8]} {instruction_in[9]} {instruction_in[10]} {instruction_in[11]} {instruction_in[12]} {instruction_in[13]} {resultOutMemSPI[0]} {resultOutMemSPI[1]} {resultOutMemSPI[2]} {resultOutMemSPI[3]} {resultOutMemSPI[4]} {resultOutMemSPI[5]} {resultOutMemSPI[6]} {resultOutMemSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Bottom -layer 4 -spreadType center -spacing 0.2 -pin {{statusOutSPI[0]} {statusOutSPI[1]} {statusOutSPI[2]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Bottom -layer 4 -spreadType center -spacing 0.2 -pin {{statusOutSPI[0]} {statusOutSPI[1]} {statusOutSPI[2]} {opcode_status[0]} {opcode_status[1]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 10 -pin {rst clk instr_wr}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 10 -pin {{resultOutMemSPI[0]} {resultOutMemSPI[1]} {resultOutMemSPI[2]} {resultOutMemSPI[3]} {resultOutMemSPI[4]} {resultOutMemSPI[5]} {resultOutMemSPI[6]} {resultOutMemSPI[7]} {instruction_in[0]} {instruction_in[1]} {instruction_in[2]} {instruction_in[3]} {instruction_in[4]} {instruction_in[5]} {instruction_in[6]} {instruction_in[7]} {instruction_in[8]} {instruction_in[9]} {instruction_in[10]} {instruction_in[11]} {instruction_in[12]} {instruction_in[13]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {}
+setPinAssignMode -pinEditInBatch false
+selectObject IO_Pin {PC_tot[0]}
+deselectAll
+selectObject IO_Pin {PC_tot[1]}
+deselectAll
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {{PC_tot[0]} {PC_tot[1]} {PC_tot[2]} {PC_tot[3]} {PC_tot[4]} {PC_tot[5]} {PC_tot[6]} {PC_tot[7]} {addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {{PC_tot[0]} {PC_tot[1]} {PC_tot[2]} {PC_tot[3]} {PC_tot[4]} {PC_tot[5]} {PC_tot[6]} {PC_tot[7]} {addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Top -layer 4 -spreadType center -spacing 0.2 -pin {{PC_tot[0]} {PC_tot[1]} {PC_tot[2]} {PC_tot[3]} {PC_tot[4]} {PC_tot[5]} {PC_tot[6]} {PC_tot[7]} {addrSPI[0]} {addrSPI[1]} {addrSPI[2]} {addrSPI[3]} {addrSPI[4]} {addrSPI[5]} {addrSPI[6]} {addrSPI[7]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Bottom -layer 4 -spreadType center -spacing 0.2 -pin {{opcode_status[0]} {opcode_status[1]} {statusOutSPI[0]} {statusOutSPI[1]} {statusOutSPI[2]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection counterclockwise -side Bottom -layer 4 -spreadType center -spacing 0.2 -pin {{opcode_status[0]} {opcode_status[1]} {statusOutSPI[0]} {statusOutSPI[1]} {statusOutSPI[2]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Left -layer 3 -spreadType center -spacing 10.0 -pin {clk rst instr_wr}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 10 -pin {{resultOutMemSPI[0]} {resultOutMemSPI[1]} {resultOutMemSPI[2]} {resultOutMemSPI[3]} {resultOutMemSPI[4]} {resultOutMemSPI[5]} {resultOutMemSPI[6]} {resultOutMemSPI[7]} {instruction_in[0]} {instruction_in[1]} {instruction_in[2]} {instruction_in[3]} {instruction_in[4]} {instruction_in[5]} {instruction_in[6]} {instruction_in[7]} {instruction_in[8]} {instruction_in[9]} {instruction_in[10]} {instruction_in[11]} {instruction_in[12]} {instruction_in[13]}}
+setPinAssignMode -pinEditInBatch false
+getPinAssignMode -pinEditInBatch -quiet
+setPinAssignMode -pinEditInBatch true
+editPin -pinWidth 0.08 -pinDepth 0.25 -fixedPin 1 -snap MGRID -fixOverlap 1 -unit MICRON -spreadDirection clockwise -side Right -layer 3 -spreadType center -spacing 10.0 -pin {{resultOutMemSPI[0]} {resultOutMemSPI[1]} {resultOutMemSPI[2]} {resultOutMemSPI[3]} {resultOutMemSPI[4]} {resultOutMemSPI[5]} {resultOutMemSPI[6]} {resultOutMemSPI[7]} {instruction_in[0]} {instruction_in[1]} {instruction_in[2]} {instruction_in[3]} {instruction_in[4]} {instruction_in[5]} {instruction_in[6]} {instruction_in[7]} {instruction_in[8]} {instruction_in[9]} {instruction_in[10]} {instruction_in[11]} {instruction_in[12]} {instruction_in[13]}}
+setPinAssignMode -pinEditInBatch false
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {vdd! vss!} -type core_rings -follow core -layer {top Metal9 bottom Metal9 left Metal8 right Metal8} -width {top 4.5 bottom 4.5 left 4.5 right 4.5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {vdd! vss!} -type core_rings -follow core -layer {top Metal9 bottom Metal9 left Metal8 right Metal8} -width {top 4.5 bottom 4.5 left 4.5 right 4.5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+gui_select -rect {365.941 208.036 359.703 210.115}
+getIoFlowFlag
+setIoFlowFlag 0
+floorPlan -site CoreSite -r 0.992807867312 0.699991 15 15 15 15
+uiSetTool select
+getIoFlowFlag
+fit
+setAddRingMode -ring_target default -extend_over_row 0 -ignore_rows 0 -avoid_short 0 -skip_crossing_trunks none -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size 1 -orthogonal_only true -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape }
+addRing -nets {vdd! vss!} -type core_rings -follow core -layer {top Metal9 bottom Metal9 left Metal8 right Metal8} -width {top 4.5 bottom 4.5 left 4.5 right 4.5} -spacing {top 2 bottom 2 left 2 right 2} -offset {top 1.8 bottom 1.8 left 1.8 right 1.8} -center 1 -extend_corner {} -threshold 0 -jog_distance 0 -snap_wire_center_to_grid None
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+set sprCreateIeRingOffset 1.0
+set sprCreateIeRingThreshold 1.0
+set sprCreateIeRingJogDistance 1.0
+set sprCreateIeRingLayers {}
+set sprCreateIeStripeWidth 10.0
+set sprCreateIeStripeThreshold 1.0
+setAddStripeMode -ignore_block_check false -break_at none -route_over_rows_only false -rows_without_stripes_only false -extend_to_closest_target none -stop_at_last_wire_for_area false -partial_set_thru_domain false -ignore_nondefault_domains false -trim_antenna_back_to_shape none -spacing_type edge_to_edge -spacing_from_block 0 -stripe_min_length stripe_width -stacked_via_top_layer Metal11 -stacked_via_bottom_layer Metal1 -via_using_exact_crossover_size false -split_vias false -orthogonal_only true -allow_jog { padcore_ring  block_ring } -skip_via_on_pin {  standardcell } -skip_via_on_wire_shape {  noshape   }
+addStripe -nets {vdd! vss!} -layer Metal8 -direction horizontal -width 4.5 -spacing 2 -number_of_sets 3 -start_from left -start_offset 0 -stop_offset 0 -switch_layer_over_obs false -max_same_layer_jog_length 2 -padcore_ring_top_layer_limit Metal11 -padcore_ring_bottom_layer_limit Metal1 -block_ring_top_layer_limit Metal11 -block_ring_bottom_layer_limit Metal1 -use_wire_group 0 -snap_wire_center_to_grid None
+clearGlobalNets
+globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+clearGlobalNets
+globalNetConnect vdd! -type pgpin -pin VDD -instanceBasename * -hierarchicalInstance {}
+globalNetConnect vss! -type pgpin -pin VSS -instanceBasename * -hierarchicalInstance {}
+setSrouteMode -viaConnectToShape { noshape }
+sroute -connect { corePin } -layerChangeRange { Metal1(1) Metal11(11) } -blockPinTarget { nearestTarget } -corePinTarget { firstAfterRowEnd } -allowJogging 1 -crossoverViaLayerRange { Metal1(1) Metal11(11) } -nets { vdd! vss! } -allowLayerChange 1 -targetViaLayerRange { Metal1(1) Metal11(11) }
+fit
+setDesignMode -process 45
+setMaxRouteLayer 6
+setMaxRouteLayer 6
+setPlaceMode -fp false
+place_design
+setDrawView place
+setLayerPreference allM9 -isVisible 0
+setLayerPreference allM9 -isVisible 1
+setLayerPreference allM4 -isVisible 0
+setLayerPreference allM4 -isVisible 1
+setLayerPreference allM3 -isVisible 0
+setLayerPreference allM3 -isVisible 1
+setLayerPreference allM4Cont -isVisible 0
+setLayerPreference allM4Cont -isVisible 1
+setLayerPreference allM8 -isVisible 0
+setLayerPreference allM8 -isVisible 1
+fit
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -preCTS
+ccopt_design
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -postCTS -hold
+fit
+setNanoRouteMode -quiet -routeInsertAntennaDiode 1
+setNanoRouteMode -quiet -routeAntennaCellName ANTENNALVT
+setNanoRouteMode -quiet -timingEngine {}
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+addMetalFill -layer { Metal1 Metal2 Metal3 Metal4 Metal5 Metal6 Metal7 Metal8 Metal9 Metal10 Metal11 }
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+optDesign -postRoute -hold -incr
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -opc
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -opc
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+addMetalFill -layer { Metal1 Metal2 Metal3 Metal4 }
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+addMetalFill -layer { Metal1 Metal2 Metal3 }
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+addMetalFill -layer { Metal2 }
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+setMetalFill -layer Metal1 -opcActiveSpacing 0.060 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal2 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal3 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal4 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal5 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal6 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal7 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal8 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal9 -opcActiveSpacing 0.070 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal10 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+setMetalFill -layer Metal11 -opcActiveSpacing 0.200 -borderSpacing -0.001 -iterationName OPCtilling -opc
+addMetalFill -layer { Metal2 }
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+optDesign -postRoute -hold -incr
+setAnalysisMode -cppr none -clockGatingCheck true -timeBorrowing true -useOutputPinCap true -sequentialConstProp false -timingSelfLoopsNoSkew false -enableMultipleDriveNet true -clkSrcPath true -warn true -usefulSkew true -analysisType onChipVariation -log true
+setExtractRCMode -engine postRoute -effortLevel high -coupled true -capFilterMode relAndCoup -coupling_c_th 0.1 -total_c_th 0 -relative_c_th 1
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -postRoute
+optDesign -postRoute -hold
+editDelete
+editDelete -layer Metal1 -shape FILLWIREOPC
+selectMarker 60.0000 180.0000 180.0000 300.0000 2 6 0
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+trimMetalFill -layer { Metal1 Metal2 Metal3 Metal4 Metal5 Metal6 Metal7 Metal8 Metal9 Metal10 Metal11 }
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -postRoute
+setExtractRCMode -engine postRoute -effortLevel high -coupled true -capFilterMode relAndCoup -coupling_c_th 0.1 -total_c_th 0 -relative_c_th 1
+setOptMode -fixCap true -fixTran true -fixFanoutLoad true
+optDesign -postRoute
+setNanoRouteMode -quiet -routeBottomRoutingLayer default
+setNanoRouteMode -quiet -drouteEndIteration default
+setNanoRouteMode -quiet -routeWithTimingDriven false
+setNanoRouteMode -quiet -routeWithSiDriven false
+routeDesign -globalDetail
+addMetalFill -layer { Metal2 }
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
+setMetalFill -layer Metal1 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal2 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal3 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal4 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal5 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal6 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal7 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal8 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal9 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal10 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+setMetalFill -layer Metal11 -windowSize 120.000 120.000 -windowStep 60.000 60.000 -minDensity 20.000 -maxDensity 65.000
+verifyMetalDensity -report microcontroller_interface_8_8.density.rpt
+setLayerPreference violation -isVisible 1
+violationBrowser -all -no_display_false
+violationBrowserClose
